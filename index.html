@@ -857,7 +857,13 @@
             color: var(--text-primary);
         }
 
-        .book-wrapper {
+        /* Ambiente do álbum: escuro para destacar claramente as páginas */
+.book-wrapper{
+    background:
+      radial-gradient(circle at 50% 45%, rgba(55,65,81,.22) 0%, rgba(17,20,24,.08) 42%, rgba(7,9,12,0) 72%);
+    border-radius: 10px;
+}
+.book-wrapper {
             flex: 1;
             display: flex;
             align-items: center;
@@ -1496,6 +1502,67 @@
                 padding: 4px 0;
             }
         }
+
+/* FUNDOS TEMÁTICOS — somente leitura */
+.fundos-trigger{background:linear-gradient(135deg,rgba(212,175,55,.13),rgba(99,102,241,.12));border-color:rgba(212,175,55,.38);color:#f6e7b0;box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.fundos-trigger:hover{border-color:#d4af37;color:#fff;background:linear-gradient(135deg,rgba(212,175,55,.2),rgba(99,102,241,.18))}
+.fundos-dialog{width:min(1240px,calc(100vw - 28px));max-width:1240px;height:min(860px,calc(100vh - 28px));max-height:calc(100vh - 28px);padding:0;border:1px solid rgba(255,255,255,.1);border-radius:24px;background:#12161f;color:var(--text-primary);box-shadow:0 35px 90px rgba(0,0,0,.58);overflow:hidden}
+.fundos-dialog::backdrop{background:rgba(5,7,12,.76);backdrop-filter:blur(10px)}
+.fundos-dialog[open]{animation:fundosIn .2s ease-out}@keyframes fundosIn{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
+.fundos-shell{height:100%;display:grid;grid-template-rows:auto auto 1fr auto;min-height:0}
+.fundos-header{padding:18px 22px 14px;border-bottom:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.025),transparent)}
+.fundos-header-main{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.fundos-title-wrap{min-width:0}.fundos-kicker{display:inline-flex;gap:6px;align-items:center;margin-bottom:6px;color:#d4af37;font-size:.68rem;text-transform:uppercase;letter-spacing:.11em;font-weight:800}.fundos-title{margin:0;border:0;padding:0;font-size:1.35rem;line-height:1.15}.fundos-subtitle{margin:6px 0 0;color:var(--text-secondary);font-size:.82rem;max-width:780px}.fundos-close{width:40px;height:40px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.035);color:#cbd5e1;cursor:pointer;font-size:1rem}.fundos-close:hover{background:rgba(255,255,255,.08);color:#fff}
+.fundos-toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:12px 22px;border-bottom:1px solid rgba(255,255,255,.07);background:#10141c}.fundos-search{min-width:0;position:relative}.fundos-search i{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:#778198;pointer-events:none}.fundos-search input{width:100%;height:42px;padding:0 14px 0 38px;border-radius:12px;border:1px solid rgba(255,255,255,.09);background:#0c1017;color:#fff;outline:none}.fundos-search input:focus{border-color:rgba(99,102,241,.75);box-shadow:0 0 0 3px rgba(99,102,241,.15)}.fundos-actions-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.fundos-mini-btn{height:42px;padding:0 13px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:#171c25;color:#e5e7eb;font:inherit;font-size:.78rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:7px}.fundos-mini-btn:hover{border-color:#6366f1;background:#1c2230}.fundos-mini-btn.gold{border-color:rgba(212,175,55,.34);color:#f6e7b0}
+.fundos-statusbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:0 22px 12px;background:#10141c}.fundos-connection,.fundos-readonly{display:inline-flex;align-items:center;gap:7px;min-height:30px;padding:5px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);color:#adb6c8;font-size:.7rem}.fundos-connection.connected{color:#9ce8cf;border-color:rgba(34,201,181,.25);background:rgba(34,201,181,.06)}.fundos-connection.pending{color:#f3d98a;border-color:rgba(212,175,55,.25);background:rgba(212,175,55,.06)}.fundos-connection.error{color:#ffb4b2;border-color:rgba(218,54,51,.25);background:rgba(218,54,51,.06)}.fundos-client-theme{display:inline-flex;align-items:center;gap:7px;min-height:30px;padding:5px 10px;border-radius:999px;border:1px solid rgba(99,102,241,.22);background:rgba(99,102,241,.06);color:#aeb9ff;font-size:.7rem}.fundos-client-theme.selected{color:#9ce8cf;border-color:rgba(34,201,181,.25);background:rgba(34,201,181,.06)}.fundos-client-theme strong{color:#fff}.fundos-readonly{padding:0;border:0;background:transparent;color:#7f8a9d}
+.fundos-badges{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:2px 22px 14px;scrollbar-width:thin;border-bottom:1px solid rgba(255,255,255,.07)}.fundos-theme-badge{flex:0 0 auto;border:1px solid rgba(255,255,255,.09);background:#171c25;color:#adb6c8;border-radius:999px;padding:7px 11px;font:inherit;font-size:.71rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px}.fundos-theme-badge:hover{border-color:#6366f1;color:#fff}.fundos-theme-badge.active{color:#fff;border-color:#d4af37;background:linear-gradient(135deg,rgba(212,175,55,.15),rgba(99,102,241,.1))}.fundos-theme-badge .count{padding:1px 6px;border-radius:999px;background:rgba(255,255,255,.08);color:#8e98ac;font-size:.62rem}
+.fundos-content{min-height:0;overflow:auto;padding:18px 22px 24px}.fundos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}.fundos-card{position:relative;min-width:0;border-radius:15px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#171c25;cursor:pointer;transition:transform .18s,border-color .18s,box-shadow .18s}.fundos-card:hover{transform:translateY(-2px);border-color:rgba(99,102,241,.7);box-shadow:0 12px 25px rgba(0,0,0,.22)}.fundos-card.selected{border-color:#d4af37;box-shadow:0 0 0 2px rgba(212,175,55,.22),0 15px 30px rgba(0,0,0,.22)}.fundos-thumb{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,#0f131b,#1a202b);overflow:hidden}.fundos-thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .2s,transform .3s}.fundos-thumb img.loaded{opacity:1}.fundos-card:hover .fundos-thumb img.loaded{transform:scale(1.025)}.fundos-skeleton{position:absolute;inset:0;display:grid;place-items:center;color:#738098}.fundos-check{position:absolute;top:9px;right:9px;z-index:2;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(7,10,16,.72);border:1px solid rgba(255,255,255,.15);color:transparent;font-size:.8rem}.fundos-card.selected .fundos-check{background:#d4af37;border-color:#d4af37;color:#16120a}.fundos-card-meta{padding:9px 10px 11px}.fundos-card-name{color:#edf0f5;font-weight:700;font-size:.74rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fundos-card-theme{margin-top:3px;color:#7f8ba0;font-size:.64rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fundos-empty{min-height:360px;display:grid;place-items:center;text-align:center;padding:32px;color:#8f9aae}.fundos-empty-card{max-width:560px}.fundos-empty-icon{width:66px;height:66px;margin:0 auto 14px;border-radius:19px;display:grid;place-items:center;font-size:1.55rem;color:#f3df9b;background:linear-gradient(135deg,rgba(212,175,55,.14),rgba(99,102,241,.13));border:1px solid rgba(212,175,55,.22)}.fundos-empty h4{margin:0 0 7px;color:#fff;font-size:1rem}.fundos-empty p{margin:0;font-size:.78rem;line-height:1.6}.fundos-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 22px;border-top:1px solid rgba(255,255,255,.08);background:#0f131a}.fundos-selection-info{color:#8994a7;font-size:.73rem}.fundos-footer-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.fundos-primary,.fundos-secondary{min-height:40px;padding:0 14px;border-radius:11px;font:inherit;font-size:.76rem;font-weight:800;cursor:pointer}.fundos-primary{border:0;background:linear-gradient(135deg,#d4af37,#b88f1f);color:#15120a;box-shadow:0 8px 18px rgba(212,175,55,.2)}.fundos-primary:disabled{opacity:.45;cursor:not-allowed}.fundos-secondary{border:1px solid rgba(255,255,255,.1);background:#171c25;color:#dce1e9}.fundos-secondary:hover{border-color:#6366f1}.fundos-fallback-input{display:none}
+@media(max-width:760px){.fundos-dialog{width:calc(100vw - 12px);height:calc(100vh - 12px);max-height:calc(100vh - 12px);border-radius:18px}.fundos-toolbar{grid-template-columns:1fr}.fundos-actions-top{justify-content:stretch}.fundos-actions-top>button{flex:1}.fundos-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}.fundos-content{padding:14px}.fundos-header,.fundos-toolbar,.fundos-statusbar,.fundos-badges{padding-left:14px;padding-right:14px}.fundos-footer{padding:10px 14px;flex-direction:column;align-items:stretch}.fundos-footer-actions>button{flex:1}}
+
+    
+        /* ============================================================
+           PADRONIZAÇÃO VISUAL DO SISTEMA — CONTROLES
+           ============================================================ */
+        .btn,
+        .gallery-collapse-btn,
+        .nav-3d button,
+        .layout-visual-btn,
+        .layout-btn,
+        .btn-version-history {
+            min-height:38px;
+            border-radius:10px;
+            font-family:var(--font);
+            font-weight:600;
+            letter-spacing:.005em;
+            transition:background .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease,transform .18s ease;
+        }
+        .btn:hover:not(:disabled),
+        .gallery-collapse-btn:hover:not(:disabled),
+        .nav-3d button:hover:not(:disabled),
+        .layout-visual-btn:hover:not(:disabled),
+        .layout-btn:hover:not(:disabled) {
+            transform:translateY(-1px);
+        }
+        .btn-outline,
+        .gallery-collapse-btn,
+        .nav-3d button,
+        .layout-visual-btn {
+            background:#fff !important;
+            color:#344054 !important;
+            border-color:#d7dbe5 !important;
+            box-shadow:0 2px 7px rgba(16,24,40,.05);
+        }
+        .btn-primary {
+            background:#5757d8 !important;
+            border-color:#5757d8 !important;
+            color:#fff !important;
+            box-shadow:0 4px 12px rgba(87,87,216,.18);
+        }
+        .btn-primary:hover:not(:disabled) {
+            background:#4747be !important;
+            border-color:#4747be !important;
+        }
+
 </style>
 </head>
 <body>
@@ -1558,6 +1625,7 @@
         </div>
 
         <div class="folder-btn-wrapper">
+            <button class="btn btn-outline btn-sm fundos-trigger" id="btnAbrirFundosTematicos" type="button" aria-haspopup="dialog"><i class="fas fa-swatchbook" aria-hidden="true"></i> Fundos temáticos</button>
             <button class="btn btn-outline btn-sm" id="btnSelecionarPastaGaleria"><i class="fas fa-folder-open" aria-hidden="true"></i> Selecionar pasta inteira</button>
             <input type="file" id="folderInputGallery" webkitdirectory multiple accept="image/*" />
             <button class="btn btn-primary btn-sm" id="btnAnalisarVisao" disabled>
@@ -1645,7 +1713,7 @@
                     <span>📖 Álbum Virtual</span>
                     <span style="font-size:0.8rem; font-weight:400; color: var(--text-secondary);" id="modal3dTitle">Capa</span>
                 </h2>
-                <button class="close-3d" id="close3D" type="button" aria-label="Fechar visualização 3D" title="Fechar"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+                <button class="close-3d" id="close3D" type="button" aria-label="Fechar álbum virtual" title="Fechar álbum virtual"><i class="fas fa-xmark" aria-hidden="true"></i><span>Fechar</span></button>
             </div>
             <div class="book-wrapper" id="bookWrapper">
                 <div class="book-physical" id="bookPhysical"></div>
@@ -1709,6 +1777,58 @@
         </div>
     </div>
 
+    <!-- GALERIA DE FUNDOS TEMÁTICOS — CONSUMO SOMENTE LEITURA -->
+    <dialog class="fundos-dialog" id="fundosTematicosDialog" aria-labelledby="fundosTematicosTitle">
+        <div class="fundos-shell">
+            <header class="fundos-header">
+                <div class="fundos-header-main">
+                    <div class="fundos-title-wrap">
+                        <div class="fundos-kicker"><i class="fas fa-sparkles" aria-hidden="true"></i> Biblioteca visual</div>
+                        <h2 class="fundos-title" id="fundosTematicosTitle">Fundos temáticos</h2>
+                        <p class="fundos-subtitle">Biblioteca compartilhada do LaminasLab. A Seleção Portátil apenas lê a pasta e organiza os fundos por tema — nenhum arquivo é alterado aqui.</p>
+                    </div>
+                    <button class="fundos-close" id="fundosTematicosClose" type="button" aria-label="Fechar galeria de fundos" title="Fechar"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+                </div>
+            </header>
+            <div>
+                <div class="fundos-toolbar">
+                    <label class="fundos-search" for="fundosTematicosSearch"><i class="fas fa-magnifying-glass" aria-hidden="true"></i><input id="fundosTematicosSearch" type="search" autocomplete="off" placeholder="Buscar por nome do fundo ou tema…" aria-label="Buscar fundos temáticos"></label>
+                    <div class="fundos-actions-top">
+                        <button class="fundos-mini-btn gold" id="btnFundosConectar" type="button"><i class="fas fa-folder-open" aria-hidden="true"></i> Conectar pasta</button>
+                        <button class="fundos-mini-btn" id="btnFundosAtualizar" type="button"><i class="fas fa-rotate" aria-hidden="true"></i> Atualizar</button>
+                        <button class="fundos-mini-btn" id="btnFundosFallback" type="button"><i class="fas fa-file-image" aria-hidden="true"></i> Seleção manual</button>
+                        <button class="fundos-mini-btn gold" id="btnFundosUsarTemaCliente" type="button" disabled><i class="fas fa-paper-plane" aria-hidden="true"></i> Usar tema no cliente</button>
+                    </div>
+                </div>
+                <div class="fundos-statusbar">
+                    <span class="fundos-connection pending" id="fundosConnectionStatus"><i class="fas fa-circle-info" aria-hidden="true"></i> Pasta ainda não conectada</span>
+                    <span class="fundos-readonly"><i class="fas fa-lock" aria-hidden="true"></i> Somente leitura</span>
+                    <span class="fundos-readonly" id="fundosSummary">Nenhum fundo carregado</span>
+                    <span class="fundos-client-theme" id="fundosClientThemeStatus"><i class="fas fa-circle-info" aria-hidden="true"></i> Nenhum tema definido para o HTML do cliente</span>
+                </div>
+                <div class="fundos-badges" id="fundosThemeBadges" aria-label="Temas dos fundos"></div>
+            </div>
+            <main class="fundos-content" id="fundosContent" tabindex="-1">
+                <div class="fundos-grid" id="fundosGrid"></div>
+                <div class="fundos-empty" id="fundosEmpty" hidden>
+                    <div class="fundos-empty-card">
+                        <div class="fundos-empty-icon"><i class="fas fa-folder-tree" aria-hidden="true"></i></div>
+                        <h4 id="fundosEmptyTitle">Conecte a biblioteca de fundos</h4>
+                        <p id="fundosEmptyText">A pasta esperada é <strong>Documentos / fundos laminaslab</strong>. Na primeira utilização, selecione essa pasta uma única vez. O navegador poderá guardar a permissão e, nas próximas aberturas, a galeria será reconhecida automaticamente.</p>
+                    </div>
+                </div>
+            </main>
+            <footer class="fundos-footer">
+                <div class="fundos-selection-info" id="fundosSelectionInfo">0 fundos selecionados</div>
+                <div class="fundos-footer-actions">
+                    <button class="fundos-secondary" id="btnFundosLimparSelecao" type="button"><i class="fas fa-xmark" aria-hidden="true"></i> Limpar seleção</button>
+                    <button class="fundos-primary" id="btnFundosAdicionar" type="button" disabled><i class="fas fa-plus" aria-hidden="true"></i> Adicionar selecionados à galeria</button>
+                </div>
+            </footer>
+        </div>
+    </dialog>
+    <input class="fundos-fallback-input" id="fundosTematicosFallbackInput" type="file" webkitdirectory directory multiple accept="image/*" />
+
     <!-- toast -->
     <div class="toast" id="toast"></div>
 
@@ -1749,6 +1869,33 @@
             */
 
             const VERSION_HISTORY_TEXT = `
+
+        VERSAO: 2.8
+        DATA: 23/08/2026
+        ATUAL: SIM
+        TITULO: Fundos temáticos enviados ao cliente e seleção de fundo por página
+        NOVO: SIM
+
+        - O criador agora pode definir um tema específico da biblioteca de fundos para ser empacotado no HTML de seleção do cliente.
+        - O tema é incorporado ao HTML gerado, sem depender da pasta de fundos do computador do criador.
+        - Cada página da prévia ganhou um botão próprio para escolher o fundo.
+        - A escolha é aplicada à página correspondente do Álbum Virtual e persistida automaticamente.
+        - O cliente pode trocar ou remover o fundo individualmente e a prévia 3D é atualizada após a aplicação.
+
+        ---
+
+        VERSAO: 2.7
+        DATA: 22/08/2026
+        ATUAL: NAO
+        TITULO: Biblioteca de fundos temáticos em galeria somente leitura
+        NOVO: SIM
+
+        - Nova galeria modal para consultar a biblioteca externa de fundos temáticos sem alterar a estrutura da pasta.
+        - A biblioteca identifica a pasta “fundos laminaslab”, organiza as subpastas como badges de temas e carrega as imagens sob demanda.
+        - O acesso usa seleção de diretório com permissão somente de leitura e pode ser lembrado pelo navegador para reabrir a biblioteca rapidamente.
+        - Incluído fallback por seleção manual de pasta para navegadores sem suporte ao seletor moderno.
+
+        ---
 
         VERSAO: 2.6.1
         DATA: 21/08/2026
@@ -1981,6 +2128,27 @@
             const toast = document.getElementById('toast');
             const btnSelecionarPastaGaleria = document.getElementById('btnSelecionarPastaGaleria');
             const folderInputGallery = document.getElementById('folderInputGallery');
+            const btnAbrirFundosTematicos = document.getElementById('btnAbrirFundosTematicos');
+            const fundosTematicosDialog = document.getElementById('fundosTematicosDialog');
+            const fundosTematicosClose = document.getElementById('fundosTematicosClose');
+            const btnFundosConectar = document.getElementById('btnFundosConectar');
+            const btnFundosAtualizar = document.getElementById('btnFundosAtualizar');
+            const btnFundosFallback = document.getElementById('btnFundosFallback');
+            const fundosTematicosFallbackInput = document.getElementById('fundosTematicosFallbackInput');
+            const fundosTematicosSearch = document.getElementById('fundosTematicosSearch');
+            const fundosConnectionStatus = document.getElementById('fundosConnectionStatus');
+            const fundosSummary = document.getElementById('fundosSummary');
+            const fundosThemeBadges = document.getElementById('fundosThemeBadges');
+            const fundosContent = document.getElementById('fundosContent');
+            const fundosGrid = document.getElementById('fundosGrid');
+            const fundosEmpty = document.getElementById('fundosEmpty');
+            const fundosEmptyTitle = document.getElementById('fundosEmptyTitle');
+            const fundosEmptyText = document.getElementById('fundosEmptyText');
+            const fundosSelectionInfo = document.getElementById('fundosSelectionInfo');
+            const fundosClientThemeStatus = document.getElementById('fundosClientThemeStatus');
+            const btnFundosUsarTemaCliente = document.getElementById('btnFundosUsarTemaCliente');
+            const btnFundosLimparSelecao = document.getElementById('btnFundosLimparSelecao');
+            const btnFundosAdicionar = document.getElementById('btnFundosAdicionar');
             const btnAnalisarVisao = document.getElementById('btnAnalisarVisao');
             const refInput = document.getElementById('refInput');
             const btnAdicionarRef = document.getElementById('btnAdicionarRef');
@@ -2013,6 +2181,22 @@
             let toastTimer;
             let galeriaInicialRecolhida = false;
 
+            // ── BIBLIOTECA DE FUNDOS TEMÁTICOS (somente leitura) ──
+            const FUNDOS_HANDLE_KEY = 'selecaoPortatilFundosTematicosHandle_v1';
+            const FUNDOS_ROOT_NAME = 'fundos laminaslab';
+            let fundosRootHandle = null;
+            let fundosThemes = [];
+            let fundosCurrentTheme = '__all__';
+            let fundosSearchTerm = '';
+            let fundosSelected = new Set();
+            let fundosImageRegistry = new Map();
+            let fundosObjectUrls = new Map();
+            let fundosImageSeq = 0;
+            let fundosObserver = null;
+            let fundosOpenedFrom = null;
+            // Tema que o criador escolheu para ser enviado ao HTML do cliente.
+            let fundosTemaClienteSelecionado = '';
+
             // ── FUNÇÕES DE PERSISTÊNCIA ──
             function saveState() {
                 try {
@@ -2028,6 +2212,7 @@
                             file: r.file || null,
                         })),
                         analiseRealizada: analiseRealizada,
+                        fundosTemaClienteSelecionado: fundosTemaClienteSelecionado
                     };
                     localforage.setItem(STORE_NAME, data).catch(err => console.error('Erro ao salvar estado:', err));
                 } catch (err) {
@@ -2053,6 +2238,9 @@
                     }));
 
                     analiseRealizada = data.analiseRealizada || false;
+                    fundosTemaClienteSelecionado = typeof data.fundosTemaClienteSelecionado === 'string'
+                        ? data.fundosTemaClienteSelecionado
+                        : '';
 
                     if (referencias.length > 0) {
                         refIdCounter = Math.max(...referencias.map(r => r.id), 0);
@@ -2074,6 +2262,7 @@
                     renderReferencias();
                     renderGallery();
                     btnAnalisarVisao.disabled = referencias.length === 0 || fotos.length === 0 || !faceapiLoaded;
+                    atualizarTemaClienteUI();
                     showToast('💾 Dados restaurados automaticamente.');
                 } else {
                     renderReferencias();
@@ -2096,7 +2285,20 @@
             // ── SELETOR DE LAYOUT (modal) ──
             const modalLayoutSelector = document.getElementById('modalLayoutSelector');
             const layoutGrid = document.getElementById('layoutGrid');
+            const pageBgDialog = document.getElementById('pageBgDialog');
+            const pageBgClose = document.getElementById('pageBgClose');
+            const pageBgCancel = document.getElementById('pageBgCancel');
+            const pageBgClear = document.getElementById('pageBgClear');
+            const pageBgApply = document.getElementById('pageBgApply');
+            const pageBgGrid = document.getElementById('pageBgGrid');
+            const pageBgPageLabel = document.getElementById('pageBgPageLabel');
+            const pageBgSelectedLabel = document.getElementById('pageBgSelectedLabel');
+            const pageBgThemeLabel = document.getElementById('pageBgThemeLabel');
             let layoutSelectorCallback = null;
+            let pageBgPaginaAtual = null;
+            let pageBgPending = null;
+            let pageBgDirty = false;
+            let pageBgOpenedFrom = null;
 
             function showToast(msg) {
                 clearTimeout(toastTimer);
@@ -2733,8 +2935,91 @@
                 showToast(`✅ Análise concluída: ${processados} fotos processadas.`);
             });
 
+            // Converte os fundos selecionados para dados portáteis, independentes da pasta
+            // do criador. Redimensiona para um limite razoável para evitar HTMLs gigantes.
+            async function fundoFileParaDataUrl(file, maxSide = 1800) {
+                if (!file) return null;
+                try {
+                    const raw = await new Promise((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.onload = () => resolve(reader.result);
+                        reader.onerror = reject;
+                        reader.readAsDataURL(file);
+                    });
+
+                    return await new Promise((resolve) => {
+                        const img = new Image();
+                        img.onload = () => {
+                            try {
+                                const scale = Math.min(1, maxSide / Math.max(img.width || 1, img.height || 1));
+                                const w = Math.max(1, Math.round((img.width || 1) * scale));
+                                const h = Math.max(1, Math.round((img.height || 1) * scale));
+                                const canvas = document.createElement('canvas');
+                                canvas.width = w;
+                                canvas.height = h;
+                                const ctx = canvas.getContext('2d', { alpha: true });
+                                if (!ctx) return resolve(raw);
+                                ctx.drawImage(img, 0, 0, w, h);
+
+                                let dataUrl = null;
+                                try {
+                                    dataUrl = canvas.toDataURL('image/webp', 0.88);
+                                } catch (_) {}
+                                if (!dataUrl || dataUrl === 'data:,') {
+                                    try { dataUrl = canvas.toDataURL('image/jpeg', 0.88); } catch (_) {}
+                                }
+                                resolve(dataUrl || raw);
+                            } catch (_) {
+                                resolve(raw);
+                            }
+                        };
+                        img.onerror = () => resolve(raw);
+                        img.src = raw;
+                    });
+                } catch (err) {
+                    console.warn('Falha ao preparar fundo portátil:', file.name, err);
+                    return null;
+                }
+            }
+
+            async function prepararTemaParaHTMLCliente() {
+                const nomeTema = String(fundosTemaClienteSelecionado || '').trim();
+                if (!nomeTema) return null;
+
+                const tema = fundosThemes.find(t => t.name === nomeTema);
+                if (!tema || !Array.isArray(tema.images) || !tema.images.length) return null;
+
+                const fundos = [];
+                for (const item of tema.images) {
+                    try {
+                        let file = item.file;
+                        if (!file && item.handle) file = await item.handle.getFile();
+                        if (!file) continue;
+                        const dataUrl = await fundoFileParaDataUrl(file);
+                        if (!dataUrl) continue;
+                        fundos.push({
+                            id: item.id,
+                            name: item.name,
+                            theme: tema.name,
+                            path: item.path || item.name,
+                            dataUrl
+                        });
+                    } catch (err) {
+                        console.warn('Não foi possível empacotar o fundo:', item.name, err);
+                    }
+                }
+
+                if (!fundos.length) return null;
+                return {
+                    version: 1,
+                    themeName: tema.name,
+                    generatedAt: new Date().toISOString(),
+                    items: fundos
+                };
+            }
+
             // ── GERAR HTML DE SELEÇÃO (com Layout-first e Smart Crop) ──
-            function gerarHTMLSelecao() {
+            async function gerarHTMLSelecao() {
                 if (fotos.length === 0) {
                     showToast('⚠️ Nenhuma foto carregada.');
                     return;
@@ -2795,6 +3080,10 @@
                 btnGerar.innerHTML = '<span class="spinner"></span> Gerando...';
 
                 try {
+                    const temaClienteData = await prepararTemaParaHTMLCliente();
+                    if (fundosTemaClienteSelecionado && !temaClienteData) {
+                        throw new Error('O tema "' + fundosTemaClienteSelecionado + '" foi selecionado, mas não foi possível acessar seus arquivos. Reconecte a biblioteca de fundos e tente novamente.');
+                    }
                     // ----- INÍCIO DO HTML GERADO (com Layout-first do LaminasLab e seletor visual + PERSISTÊNCIA) -----
                     const htmlSelecao = `<!DOCTYPE html>
         <html lang="pt-BR">
@@ -3638,22 +3927,61 @@
           .client-brand { display:flex; align-items:center; gap:14px; }
           .client-logo {
             position:relative;
-            width:48px; height:48px; flex:0 0 48px;
+            width:50px; height:50px; flex:0 0 50px;
             border-radius:50%;
             display:grid; place-items:center;
-            background:linear-gradient(145deg,#171b2f 0%,#30355f 52%,#5b5ce2 100%);
+            background:
+              radial-gradient(circle at 30% 25%,rgba(255,255,255,.18),transparent 34%),
+              linear-gradient(145deg,#12172a 0%,#252d55 48%,#5455d8 100%);
             color:#fff;
-            border:1px solid rgba(255,255,255,.7);
-            box-shadow:0 8px 22px rgba(91,92,226,.25), inset 0 0 0 1px rgba(255,255,255,.14);
+            border:1px solid rgba(255,255,255,.78);
+            box-shadow:
+              0 10px 26px rgba(55,58,155,.22),
+              0 0 0 4px rgba(91,92,226,.06),
+              inset 0 0 0 1px rgba(255,255,255,.12);
+            overflow:hidden;
           }
           .client-logo::before {
             content:'';
-            position:absolute; inset:5px;
-            border:1px solid rgba(217,173,34,.82);
+            position:absolute; inset:4px;
+            border:1px solid rgba(223,184,70,.92);
             border-radius:50%;
-            box-shadow:0 0 0 1px rgba(255,255,255,.06);
+            box-shadow:
+              0 0 0 1px rgba(255,255,255,.05),
+              inset 0 0 12px rgba(223,184,70,.08);
           }
-          .client-logo i { position:relative; z-index:1; font-size:1rem; filter:drop-shadow(0 2px 4px rgba(0,0,0,.28)); }
+          .client-logo::after {
+            content:'';
+            position:absolute;
+            width:12px; height:12px;
+            right:7px; top:7px;
+            border-radius:50%;
+            background:rgba(255,255,255,.72);
+            filter:blur(7px);
+            opacity:.34;
+          }
+          .client-logo .logo-mark {
+            position:relative;
+            z-index:1;
+            width:27px;
+            height:27px;
+            display:block;
+            filter:drop-shadow(0 3px 5px rgba(0,0,0,.28));
+          }
+          .client-logo .logo-mark .frame {
+            fill:none;
+            stroke:rgba(255,255,255,.94);
+            stroke-width:1.7;
+            stroke-linejoin:round;
+          }
+          .client-logo .logo-mark .lens {
+            fill:rgba(9,12,27,.18);
+            stroke:#dfb846;
+            stroke-width:1.7;
+          }
+          .client-logo .logo-mark .shine {
+            fill:rgba(255,255,255,.80);
+          }
           .client-brand h1 { color:var(--client-text); font-size:clamp(1.2rem,2vw,1.65rem); margin:0; }
           .client-brand p { color:var(--client-muted); font-size:.88rem; margin-top:2px; }
           .event-pill { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--client-border); background:#fff; border-radius:999px; color:var(--client-muted); font-size:.82rem; }
@@ -3674,7 +4002,7 @@
           .client-panel-head { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 18px; border-bottom:1px solid var(--client-border); }
           .client-panel-head h3 { margin:0; font-size:1rem; color:var(--client-text); }
           .thumbs-grid { max-height:none; overflow:visible; grid-template-columns:repeat(auto-fill,minmax(132px,1fr)); padding:16px; gap:12px; }
-          .thumb-item { background:#fff; border:2px solid var(--client-border); border-radius:16px; box-shadow:none; transform:none !important; }
+          .thumb-item { background:#fff; border:2px solid var(--client-border); border-radius:16px; box-shadow:none; transform:none !important; content-visibility:auto; contain-intrinsic-size:170px 170px; }
           .thumb-item:hover { border-color:#b9bdff; box-shadow:0 8px 18px rgba(16,24,40,.07); }
           .thumb-item.selected { border-color:var(--client-primary); box-shadow:0 0 0 3px rgba(91,92,226,.12); }
           .thumb-item img { height:138px; background:#f2f4f7; }
@@ -3692,7 +4020,7 @@
           .album-preview-toggle { border:1px solid #d7dbeb; background:#fff; color:#475467; border-radius:12px; min-height:38px; padding:0 12px; display:inline-flex; align-items:center; gap:7px; font-size:.78rem; font-weight:800; cursor:pointer; transition:.18s ease; }
           .album-preview-toggle:hover { border-color:#b9bdff; color:var(--client-primary); transform:translateY(-1px); }
           .album-preview-panel.is-collapsed .album-preview-toggle i { transform:rotate(180deg); }
-          .pagina-item { background:#fff; border:1px solid var(--client-border); border-left:4px solid var(--client-primary); color:var(--client-text); }
+          .pagina-item { background:#fff; border:1px solid var(--client-border); border-left:4px solid var(--client-primary); color:var(--client-text); content-visibility:auto; contain-intrinsic-size:90px 180px; }
           .advanced-zone { display:none !important; }
           .advanced-zone summary { list-style:none; cursor:pointer; padding:14px 16px; border:1px solid var(--client-border); border-radius:16px; background:#fff; color:var(--client-text); font-weight:700; }
           .advanced-zone summary::-webkit-details-marker { display:none; }
@@ -3838,6 +4166,21 @@
           .mode-manual #galleryHint::after { content:' No modo manual, você seleciona a foto e informa a página.'; color:var(--client-muted); }
           .mode-suggested #galleryHint { color:var(--client-text) !important; }
           .mode-suggested #galleryHint::after { content:' Aqui você escolhe as fotos favoritas. Quando finalizar clique em "Montagem Sugerida" e tenha 3 opções de montagem editáveis.'; color:var(--client-muted); }
+          /* No modo Sugerida, a interface trabalha somente com favoritas.
+             A ação de página continua disponível no modo Manual, mas não fica
+             acessível visualmente nem por foco dentro da Sugerida. */
+          .mode-suggested .thumb-item .assign-page-action { display:none !important; }
+          .mode-suggested #modalPageControls,
+          .mode-suggested #modalPageActions { display:none !important; }
+          .mode-suggested #modalBtnFavorita { display:inline-flex !important; }
+          .mode-manual #modalBtnFavorita { display:none !important; }
+
+          /* Depois que uma montagem sugerida foi aplicada, liberar revisão manual. */
+          .mode-suggested.suggested-editable .thumb-item .assign-page-action { display:inline-flex !important; }
+          .mode-suggested.suggested-editable #modalPageControls,
+          .mode-suggested.suggested-editable #modalPageActions { display:block !important; }
+          .mode-suggested.suggested-editable .modal-page-actions { display:flex !important; }
+
           .mode-manual .client-toolbar-left [data-filter="aniversariante"],
           .mode-manual .client-toolbar-left [data-filter="familia"],
           .mode-manual .client-toolbar-left [data-filter="grupos"],
@@ -4015,13 +4358,1830 @@
                 padding: 4px 0;
             }
         }
+
+          /* ============================================================
+             FUNDOS TEMÁTICOS DO TEMA ENVIADO PELO CRIADOR
+             ============================================================ */
+          .pagina-item {
+            position:relative;
+            isolation:isolate;
+          }
+          .page-bg-btn {
+            min-height:34px;
+            padding:0 10px;
+            border-radius:10px;
+            border:1px solid rgba(212,175,55,.34);
+            background:linear-gradient(135deg,rgba(212,175,55,.11),rgba(99,102,241,.10));
+            color:#f5df9b;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:6px;
+            cursor:pointer;
+            font-size:.7rem;
+            font-weight:800;
+            transition:.18s ease;
+          }
+          .page-bg-btn:hover {
+            border-color:#d4af37;
+            background:linear-gradient(135deg,rgba(212,175,55,.18),rgba(99,102,241,.16));
+            transform:translateY(-1px);
+          }
+          .page-bg-btn.has-bg {
+            color:#fff;
+            border-color:rgba(34,201,181,.55);
+            background:linear-gradient(135deg,rgba(34,201,181,.13),rgba(99,102,241,.12));
+          }
+          .page-bg-preview {
+            width:24px;
+            height:24px;
+            border-radius:7px;
+            border:1px solid rgba(255,255,255,.16);
+            background:#0c1017 center/cover no-repeat;
+            flex:0 0 24px;
+          }
+          .page-bg-status {
+            display:inline-flex;
+            align-items:center;
+            gap:6px;
+            color:var(--text-muted);
+            font-size:.66rem;
+            margin-left:.15rem;
+            min-width:120px;
+          }
+          .theme-background-dialog {
+            width:min(1120px,calc(100vw - 24px));
+            max-width:1120px;
+            height:min(760px,calc(100vh - 24px));
+            max-height:calc(100vh - 24px);
+            padding:0;
+            border:1px solid rgba(255,255,255,.10);
+            border-radius:22px;
+            background:#12161f;
+            color:var(--text-primary);
+            box-shadow:0 35px 90px rgba(0,0,0,.58);
+            overflow:hidden;
+          }
+          .theme-background-dialog::backdrop {
+            background:rgba(5,7,12,.78);
+            backdrop-filter:blur(10px);
+          }
+          .theme-bg-shell {
+            height:100%;
+            display:grid;
+            grid-template-rows:auto auto 1fr auto;
+            min-height:0;
+          }
+          .theme-bg-header {
+            display:flex;
+            align-items:flex-start;
+            justify-content:space-between;
+            gap:16px;
+            padding:18px 20px 14px;
+            border-bottom:1px solid rgba(255,255,255,.08);
+            background:linear-gradient(180deg,rgba(255,255,255,.025),transparent);
+          }
+          .theme-bg-kicker {
+            display:inline-flex;
+            align-items:center;
+            gap:6px;
+            color:#d4af37;
+            text-transform:uppercase;
+            letter-spacing:.11em;
+            font-size:.67rem;
+            font-weight:800;
+          }
+          .theme-bg-title {
+            margin:5px 0 0;
+            border:0;
+            padding:0;
+            font-size:1.2rem;
+          }
+          .theme-bg-subtitle {
+            margin:5px 0 0;
+            color:var(--text-secondary);
+            font-size:.78rem;
+            line-height:1.45;
+          }
+          .theme-bg-close {
+            width:40px;
+            height:40px;
+            border-radius:12px;
+            border:1px solid rgba(255,255,255,.10);
+            background:rgba(255,255,255,.035);
+            color:#cbd5e1;
+            cursor:pointer;
+            flex:0 0 40px;
+          }
+          .theme-bg-close:hover { background:rgba(255,255,255,.08); color:#fff; }
+          .theme-bg-toolbar {
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:10px;
+            flex-wrap:wrap;
+            padding:11px 20px;
+            border-bottom:1px solid rgba(255,255,255,.07);
+            background:#10141c;
+          }
+          .theme-bg-page-pill,
+          .theme-bg-selected-pill {
+            display:inline-flex;
+            align-items:center;
+            gap:7px;
+            min-height:30px;
+            padding:5px 10px;
+            border-radius:999px;
+            border:1px solid rgba(255,255,255,.08);
+            background:rgba(255,255,255,.025);
+            color:#aeb8ca;
+            font-size:.68rem;
+            font-weight:700;
+          }
+          .theme-bg-selected-pill { color:#9ce8cf; border-color:rgba(34,201,181,.22); background:rgba(34,201,181,.06); }
+          .theme-bg-grid {
+            min-height:0;
+            overflow:auto;
+            padding:18px 20px 20px;
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
+            gap:14px;
+          }
+          .theme-bg-card {
+            position:relative;
+            overflow:hidden;
+            border-radius:15px;
+            border:1px solid rgba(255,255,255,.08);
+            background:#171c25;
+            cursor:pointer;
+            transition:transform .18s,border-color .18s,box-shadow .18s;
+            outline:none;
+          }
+          .theme-bg-card:hover {
+            transform:translateY(-2px);
+            border-color:rgba(99,102,241,.72);
+            box-shadow:0 12px 26px rgba(0,0,0,.22);
+          }
+          .theme-bg-card:focus-visible {
+            border-color:#6366f1;
+            box-shadow:0 0 0 3px rgba(99,102,241,.18);
+          }
+          .theme-bg-card.selected {
+            border-color:#d4af37;
+            box-shadow:0 0 0 2px rgba(212,175,55,.23),0 15px 30px rgba(0,0,0,.22);
+          }
+          .theme-bg-thumb {
+            position:relative;
+            aspect-ratio:4/3;
+            overflow:hidden;
+            background:#0d1117;
+          }
+          .theme-bg-thumb img {
+            width:100%;
+            height:100%;
+            display:block;
+            object-fit:cover;
+          }
+          .theme-bg-check {
+            position:absolute;
+            top:9px;
+            right:9px;
+            width:30px;
+            height:30px;
+            border-radius:50%;
+            display:grid;
+            place-items:center;
+            background:rgba(7,10,16,.72);
+            border:1px solid rgba(255,255,255,.16);
+            color:transparent;
+            font-size:.8rem;
+          }
+          .theme-bg-card.selected .theme-bg-check {
+            background:#d4af37;
+            border-color:#d4af37;
+            color:#16120a;
+          }
+          .theme-bg-meta { padding:9px 10px 11px; }
+          .theme-bg-name {
+            color:#edf0f5;
+            font-weight:700;
+            font-size:.74rem;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+          }
+          .theme-bg-theme {
+            margin-top:3px;
+            color:#7f8ba0;
+            font-size:.63rem;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+          }
+          .theme-bg-empty {
+            min-height:280px;
+            display:grid;
+            place-items:center;
+            grid-column:1/-1;
+            color:#8f9aae;
+            text-align:center;
+            padding:30px;
+          }
+          .theme-bg-footer {
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:12px;
+            padding:11px 20px;
+            border-top:1px solid rgba(255,255,255,.08);
+            background:#0f131a;
+          }
+          .theme-bg-footer-note { color:#8994a7; font-size:.7rem; }
+          .theme-bg-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+          .theme-bg-action {
+            min-height:40px;
+            padding:0 14px;
+            border-radius:11px;
+            font:inherit;
+            font-size:.75rem;
+            font-weight:800;
+            cursor:pointer;
+          }
+          .theme-bg-action.primary {
+            border:0;
+            background:linear-gradient(135deg,#d4af37,#b88f1f);
+            color:#15120a;
+            box-shadow:0 8px 18px rgba(212,175,55,.20);
+          }
+          .theme-bg-action.secondary {
+            border:1px solid rgba(255,255,255,.10);
+            background:#171c25;
+            color:#dce1e9;
+          }
+          .theme-bg-action:disabled { opacity:.45; cursor:not-allowed; }
+          @media(max-width:760px){
+            .theme-background-dialog{width:calc(100vw - 12px);height:calc(100vh - 12px);max-height:calc(100vh - 12px);border-radius:18px}
+            .theme-bg-grid{grid-template-columns:repeat(auto-fill,minmax(135px,1fr));gap:10px;padding:14px}
+            .theme-bg-header,.theme-bg-toolbar,.theme-bg-footer{padding-left:14px;padding-right:14px}
+            .theme-bg-footer{flex-direction:column;align-items:stretch}
+            .theme-bg-actions>button{flex:1}
+          }
+
+          /* ============================================================
+             UI SYSTEM — PADRONIZAÇÃO PROFISSIONAL
+             Sem alteração de lógica: apenas hierarquia, estados e legibilidade.
+             ============================================================ */
+          :root {
+            --ui-primary:#5757d8;
+            --ui-primary-hover:#4747be;
+            --ui-success:#17865f;
+            --ui-success-hover:#116b4c;
+            --ui-gold:#c79c2f;
+            --ui-gold-hover:#ad8523;
+            --ui-danger:#c43d43;
+            --ui-danger-hover:#a82f35;
+            --ui-text:#1f2937;
+            --ui-muted:#667085;
+            --ui-border:#d7dbe5;
+            --ui-border-hover:#b9bfd0;
+            --ui-surface:#ffffff;
+            --ui-surface-soft:#f7f8fb;
+          }
+
+          /* Botões base: sólidos, previsíveis e com hierarquia clara. */
+          .btn,
+          .btn-client,
+          .theme-bg-action,
+          .fundos-mini-btn,
+          .gallery-collapse-btn,
+          .album-preview-toggle,
+          .tutorial-launch,
+          .filter-chip,
+          .access-tab,
+          .layout-visual-btn,
+          .layout-btn,
+          .nav-3d button,
+          .close-3d,
+          .theme-bg-close,
+          .page-bg-btn,
+          .btn-version-history {
+            appearance:none;
+            -webkit-appearance:none;
+            text-decoration:none;
+            font-family:'Poppins','Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+            font-weight:600;
+            letter-spacing:.005em;
+            transition:
+              background-color .18s ease,
+              border-color .18s ease,
+              color .18s ease,
+              box-shadow .18s ease,
+              transform .18s ease,
+              opacity .18s ease;
+          }
+
+          .btn:focus-visible,
+          .btn-client:focus-visible,
+          .theme-bg-action:focus-visible,
+          .fundos-mini-btn:focus-visible,
+          .gallery-collapse-btn:focus-visible,
+          .album-preview-toggle:focus-visible,
+          .tutorial-launch:focus-visible,
+          .filter-chip:focus-visible,
+          .access-tab:focus-visible,
+          .layout-visual-btn:focus-visible,
+          .layout-btn:focus-visible,
+          .nav-3d button:focus-visible,
+          .close-3d:focus-visible,
+          .theme-bg-close:focus-visible,
+          .page-bg-btn:focus-visible,
+          .btn-version-history:focus-visible {
+            outline:3px solid rgba(87,87,216,.18);
+            outline-offset:2px;
+          }
+
+          .btn:hover:not(:disabled),
+          .btn-client:hover:not(:disabled),
+          .theme-bg-action:hover:not(:disabled),
+          .fundos-mini-btn:hover:not(:disabled),
+          .gallery-collapse-btn:hover:not(:disabled),
+          .album-preview-toggle:hover:not(:disabled),
+          .tutorial-launch:hover:not(:disabled),
+          .filter-chip:hover:not(:disabled),
+          .layout-visual-btn:hover:not(:disabled),
+          .layout-btn:hover:not(:disabled),
+          .nav-3d button:hover:not(:disabled),
+          .page-bg-btn:hover:not(:disabled) {
+            transform:translateY(-1px);
+          }
+
+          .btn:disabled,
+          .btn-client:disabled,
+          .theme-bg-action:disabled,
+          .fundos-mini-btn:disabled,
+          .gallery-collapse-btn:disabled,
+          .album-preview-toggle:disabled,
+          .nav-3d button:disabled {
+            opacity:.48;
+            cursor:not-allowed;
+            transform:none !important;
+            box-shadow:none !important;
+          }
+
+          /* Variantes principais */
+          .btn-primary,
+          .btn-client-primary {
+            background:var(--ui-primary) !important;
+            color:#fff !important;
+            border:1px solid var(--ui-primary) !important;
+            box-shadow:0 4px 12px rgba(87,87,216,.18) !important;
+          }
+          .btn-primary:hover:not(:disabled),
+          .btn-client-primary:hover:not(:disabled) {
+            background:var(--ui-primary-hover) !important;
+            border-color:var(--ui-primary-hover) !important;
+            box-shadow:0 7px 18px rgba(87,87,216,.22) !important;
+          }
+
+          .btn-success,
+          .btn-client-success {
+            background:var(--ui-success) !important;
+            color:#fff !important;
+            border:1px solid var(--ui-success) !important;
+            box-shadow:0 4px 12px rgba(23,134,95,.18) !important;
+          }
+          .btn-success:hover:not(:disabled),
+          .btn-client-success:hover:not(:disabled) {
+            background:var(--ui-success-hover) !important;
+            border-color:var(--ui-success-hover) !important;
+          }
+
+          .btn-gold,
+          .btn-client-gold {
+            background:var(--ui-gold) !important;
+            color:#221a06 !important;
+            border:1px solid var(--ui-gold) !important;
+            box-shadow:0 4px 12px rgba(199,156,47,.18) !important;
+          }
+          .btn-gold:hover:not(:disabled),
+          .btn-client-gold:hover:not(:disabled) {
+            background:var(--ui-gold-hover) !important;
+            border-color:var(--ui-gold-hover) !important;
+          }
+
+          .btn-danger {
+            background:var(--ui-danger) !important;
+            color:#fff !important;
+            border:1px solid var(--ui-danger) !important;
+            box-shadow:0 4px 12px rgba(196,61,67,.16) !important;
+          }
+          .btn-danger:hover:not(:disabled) {
+            background:var(--ui-danger-hover) !important;
+            border-color:var(--ui-danger-hover) !important;
+          }
+
+          .btn-outline,
+          .btn-client-secondary,
+          .btn-client-light,
+          .theme-bg-action.secondary,
+          .fundos-mini-btn,
+          .gallery-collapse-btn,
+          .album-preview-toggle,
+          .tutorial-launch {
+            background:#fff !important;
+            color:#344054 !important;
+            border:1px solid var(--ui-border) !important;
+            box-shadow:0 2px 7px rgba(16,24,40,.05) !important;
+          }
+          .btn-outline:hover:not(:disabled),
+          .btn-client-secondary:hover:not(:disabled),
+          .btn-client-light:hover:not(:disabled),
+          .theme-bg-action.secondary:hover:not(:disabled),
+          .fundos-mini-btn:hover:not(:disabled),
+          .gallery-collapse-btn:hover:not(:disabled),
+          .album-preview-toggle:hover:not(:disabled),
+          .tutorial-launch:hover:not(:disabled) {
+            background:#f8f9fc !important;
+            color:#1d2939 !important;
+            border-color:var(--ui-border-hover) !important;
+            box-shadow:0 6px 14px rgba(16,24,40,.08) !important;
+          }
+
+          .btn-3d,
+          .btn-client-purple {
+            background:#6f50c9 !important;
+            color:#fff !important;
+            border:1px solid #6f50c9 !important;
+            box-shadow:0 4px 12px rgba(111,80,201,.18) !important;
+          }
+          .btn-3d:hover:not(:disabled),
+          .btn-client-purple:hover:not(:disabled) {
+            background:#5c40ae !important;
+            border-color:#5c40ae !important;
+          }
+
+          /* Chips de filtro: aparência de controle, não de link. */
+          .filter-chip {
+            min-height:38px !important;
+            padding:0 13px !important;
+            border-radius:10px !important;
+            background:#fff !important;
+            color:#667085 !important;
+            border:1px solid var(--ui-border) !important;
+            box-shadow:0 2px 6px rgba(16,24,40,.04) !important;
+          }
+          .filter-chip.active {
+            background:#f1f0ff !important;
+            color:var(--ui-primary) !important;
+            border-color:#bfc1fb !important;
+            box-shadow:0 0 0 3px rgba(87,87,216,.07) !important;
+          }
+
+          /* Botões de layout: cartões claramente clicáveis. */
+          .layout-btn {
+            background:#fff !important;
+            color:#344054 !important;
+            border:1px solid var(--ui-border) !important;
+            border-radius:12px !important;
+            min-height:112px;
+            box-shadow:0 3px 9px rgba(16,24,40,.05) !important;
+          }
+          .layout-btn:hover:not(:disabled) {
+            background:#fafbff !important;
+            border-color:#b9bfd0 !important;
+            box-shadow:0 8px 18px rgba(16,24,40,.08) !important;
+          }
+          .layout-btn.active {
+            background:#f5f5ff !important;
+            border-color:#8f92ee !important;
+            box-shadow:0 0 0 3px rgba(87,87,216,.09) !important;
+          }
+
+          .layout-visual-btn {
+            background:#fff !important;
+            color:#475467 !important;
+            border:1px solid var(--ui-border) !important;
+            border-radius:9px !important;
+            padding:3px !important;
+            box-shadow:0 2px 6px rgba(16,24,40,.04) !important;
+          }
+          .layout-visual-btn:hover:not(:disabled) {
+            background:#f8f9fc !important;
+            border-color:#aeb4c4 !important;
+          }
+
+          /* Botão de fundo da página: ação explícita e visualmente estável. */
+          .page-bg-btn {
+            min-height:36px !important;
+            padding:5px 10px !important;
+            border-radius:10px !important;
+            background:#fff !important;
+            color:#344054 !important;
+            border:1px solid var(--ui-border) !important;
+            box-shadow:0 2px 6px rgba(16,24,40,.04) !important;
+          }
+          .page-bg-btn.has-bg {
+            color:#3d4f9a !important;
+            border-color:#bfc8ee !important;
+            background:#f7f8ff !important;
+          }
+
+          /* Barra inferior: controles com peso consistente. */
+          .sticky-main .btn-client {
+            min-height:44px !important;
+            border-radius:10px !important;
+            padding:0 16px !important;
+          }
+
+          /* Modais: cabeçalho, ações e fechamento sem controles “invisíveis”. */
+          .modal-box {
+            background:#fff !important;
+            color:var(--ui-text) !important;
+            border:1px solid #dde1ea !important;
+            border-radius:18px !important;
+            box-shadow:0 24px 70px rgba(16,24,40,.18) !important;
+          }
+          .modal-box h3,
+          .modal-box label {
+            color:#1d2939 !important;
+          }
+          .modal-box p,
+          .modal-box .status-msg {
+            color:#667085 !important;
+          }
+          .modal-actions {
+            padding-top:13px;
+            border-top:1px solid #edf0f4;
+          }
+
+          /* Álbum Virtual — acabamento premium escuro, alinhado ao LaminasLab. */
+          .preview-info-area,
+          .client-note-field {
+            background:transparent !important;
+          }
+          .preview-info-area {
+            border-top:1px solid rgba(255,255,255,.08) !important;
+            margin-top:6px !important;
+            padding:10px 0 4px !important;
+          }
+          .preview-info-title,
+          .client-note-field label {
+            color:#edf0f5 !important;
+          }
+          .preview-info-copy p,
+          .client-note-meta {
+            color:#9aa4b3 !important;
+          }
+          .client-note-field textarea,
+          #clientOrientacoesInput,
+          .modal-box textarea {
+            width:100% !important;
+            background:#0c0e12 !important;
+            color:#edf0f5 !important;
+            border:1px solid rgba(255,255,255,.10) !important;
+            border-radius:10px !important;
+            box-shadow:inset 0 1px 0 rgba(255,255,255,.02) !important;
+            caret-color:#1fc9b5;
+          }
+          .client-note-field textarea::placeholder,
+          #clientOrientacoesInput::placeholder,
+          .modal-box textarea::placeholder {
+            color:#5f6a7a !important;
+            opacity:1 !important;
+          }
+          .client-note-field textarea:focus,
+          #clientOrientacoesInput:focus,
+          .modal-box textarea:focus {
+            border-color:rgba(31,201,181,.65) !important;
+            box-shadow:0 0 0 3px rgba(31,201,181,.10) !important;
+            outline:none !important;
+          }
+
+          .modal-3d-box {
+            background:#111418 !important;
+            border:1px solid rgba(255,255,255,.10) !important;
+            box-shadow:0 28px 90px rgba(0,0,0,.55) !important;
+          }
+          .modal-3d-header {
+            border-bottom:1px solid rgba(255,255,255,.08) !important;
+          }
+          .modal-3d-header h2 {
+            color:#edf0f5 !important;
+          }
+          .modal-3d-header h2 span:last-child {
+            color:#7f8a9d !important;
+          }
+          .close-3d {
+            min-height:38px !important;
+            min-width:88px;
+            padding:0 14px !important;
+            border:1px solid rgba(255,255,255,.12) !important;
+            border-radius:10px !important;
+            background:#181c22 !important;
+            color:#edf0f5 !important;
+            display:inline-flex !important;
+            align-items:center;
+            justify-content:center;
+            gap:7px;
+            box-shadow:none !important;
+          }
+          .close-3d:hover {
+            background:rgba(31,201,181,.10) !important;
+            border-color:rgba(31,201,181,.55) !important;
+            color:#1fc9b5 !important;
+          }
+          .book-wrapper {
+            background:
+              radial-gradient(circle at 50% 45%, rgba(31,201,181,.055) 0%, rgba(17,20,24,.02) 38%, transparent 72%) !important;
+            border-radius:10px;
+          }
+          .nav-3d {
+            border-top:1px solid rgba(255,255,255,.08) !important;
+            padding-top:8px !important;
+          }
+          .nav-3d button {
+            min-height:38px !important;
+            padding:0 14px !important;
+            border-radius:10px !important;
+            background:#181c22 !important;
+            color:#edf0f5 !important;
+            border:1px solid rgba(255,255,255,.10) !important;
+            box-shadow:none !important;
+          }
+          .nav-3d button:hover:not(:disabled) {
+            background:rgba(31,201,181,.10) !important;
+            border-color:rgba(31,201,181,.55) !important;
+            color:#1fc9b5 !important;
+          }
+          .nav-3d button:disabled {
+            background:#14181e !important;
+            border-color:rgba(255,255,255,.06) !important;
+            color:#5f6a7a !important;
+            opacity:.7 !important;
+          }
+          .page-indicator {
+            color:#9aa4b3 !important;
+            font-weight:600 !important;
+          }
+
+          /* Fundo temático: cartões e ações legíveis, sem “mágica” visual. */
+          .theme-bg-card {
+            background:#fff !important;
+            border-color:#dfe3eb !important;
+            box-shadow:0 3px 9px rgba(16,24,40,.05) !important;
+          }
+          .theme-bg-card:hover {
+            border-color:#b9bfd0 !important;
+            box-shadow:0 8px 18px rgba(16,24,40,.08) !important;
+          }
+          .theme-bg-card.selected {
+            border-color:#8f92ee !important;
+            box-shadow:0 0 0 3px rgba(87,87,216,.09) !important;
+          }
+          .theme-bg-name {
+            color:#1d2939 !important;
+          }
+          .theme-bg-theme {
+            color:#667085 !important;
+          }
+          .theme-bg-action.primary {
+            background:linear-gradient(180deg,#6c6edc,#5757d8) !important;
+            color:#fff !important;
+            border:1px solid #5757d8 !important;
+            box-shadow:0 7px 16px rgba(87,87,216,.18) !important;
+          }
+          .theme-bg-action.primary:hover:not(:disabled) {
+            background:linear-gradient(180deg,#5d5fcf,#4747be) !important;
+          }
+          .theme-bg-action.secondary {
+            background:#fff !important;
+            color:#344054 !important;
+          }
+
+          /* Reduz o aspecto de “template genérico” dos controles pequenos. */
+          .version-badge,
+          .btn-version-history {
+            background:#fff !important;
+            color:#667085 !important;
+            border:1px solid var(--ui-border) !important;
+          }
+          .btn-version-history {
+            min-height:34px;
+            padding:0 10px;
+            border-radius:9px !important;
+          }
+
+          @media (max-width:760px) {
+            .close-3d {
+              min-width:44px !important;
+              width:44px !important;
+              padding:0 !important;
+            }
+            .close-3d span { display:none; }
+          }
+
 </style>
-        </head>
+        <style id="mobile-first-selection-design">
+/* ============================================================
+   EXPERIÊNCIA MOBILE-FIRST — ÁREA DO CLIENTE
+   A interface de desktop permanece intacta.
+   ============================================================ */
+.mobile-trust-row,
+.mobile-capability-rail,
+.mobile-workspace-nav{display:none;}
+
+@media (max-width: 760px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;}
+  body.selection-modal-open{overflow:hidden!important;touch-action:auto;}
+  body.selection-modal-open .modal-overlay,
+  body.selection-modal-open .modal-overlay *,
+  body.selection-modal-open dialog,
+  body.selection-modal-open dialog *{
+    touch-action:auto;
+  }
+  body.selection-modal-open .modal-overlay.active{
+    pointer-events:auto!important;
+  }
+  body{
+    padding:0 0 calc(124px + env(safe-area-inset-bottom));
+    background:#f5f7fb;
+    min-height:100svh;
+  }
+  .container{
+    width:100%;
+    max-width:none;
+    min-height:100svh;
+    padding:12px 12px calc(128px + env(safe-area-inset-bottom));
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    overflow:visible;
+    background:transparent;
+  }
+  .container::before{height:3px;position:fixed;z-index:1200;top:0;left:0;right:0;}
+
+  .client-topbar{
+    margin-bottom:10px;
+    gap:10px;
+    align-items:center;
+  }
+  .client-brand{gap:10px;min-width:0;}
+  .client-logo{width:42px;height:42px;flex:0 0 42px;border-radius:13px;}
+  .client-logo .logo-mark{width:26px;height:26px;}
+  .client-brand h1{
+    font-size:clamp(1rem,4.7vw,1.25rem);
+    line-height:1.15;
+    letter-spacing:-.02em;
+  }
+  .client-brand p{
+    font-size:.72rem;
+    line-height:1.3;
+    margin-top:2px;
+  }
+  .event-pill{display:none!important;}
+  .tutorial-launch{
+    min-width:40px!important;
+    width:40px!important;
+    height:40px!important;
+    padding:0!important;
+    border-radius:12px!important;
+    flex:0 0 40px!important;
+  }
+  .tutorial-launch span{display:none!important;}
+
+  .client-hero{
+    padding:16px;
+    border-radius:18px;
+    margin:0 0 10px;
+    box-shadow:0 8px 24px rgba(16,24,40,.06);
+  }
+  .client-hero h2{
+    font-size:clamp(1.24rem,6vw,1.65rem);
+    line-height:1.12;
+    margin-bottom:6px;
+  }
+  .client-hero p{
+    font-size:.75rem;
+    line-height:1.42;
+  }
+  .client-progress{
+    gap:5px;
+    margin-top:13px;
+  }
+  .client-step{height:5px;}
+
+  .access-process{
+    margin:10px 0 8px;
+    padding:12px;
+    border-radius:18px;
+  }
+  .access-process-head{margin-bottom:9px;}
+  .access-process-title{font-size:.88rem;}
+  .access-process-copy{font-size:.68rem;line-height:1.35;}
+  .access-tabs{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:7px;
+  }
+  .access-tab{
+    min-height:126px!important;
+    padding:10px 7px;
+    border-radius:14px;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    gap:7px;
+    text-align:center;
+  }
+  .access-tab .access-icon{
+    width:34px;
+    height:34px;
+    border-radius:11px;
+    font-size:.83rem;
+  }
+  .access-tab strong{
+    font-size:.68rem;
+    line-height:1.18;
+  }
+  .access-tab span{
+    font-size:.58rem;
+    line-height:1.28;
+    margin-top:3px;
+  }
+  .access-tab > span:last-child > span{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+    overflow:hidden;
+  }
+
+  .mobile-trust-row{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:7px;
+    margin:8px 0;
+  }
+  .mobile-trust-item{
+    display:grid;
+    grid-template-columns:34px minmax(0,1fr);
+    align-items:center;
+    gap:9px;
+    padding:9px 10px;
+    background:#fff;
+    border:1px solid #e4e7ec;
+    border-radius:13px;
+    box-shadow:0 3px 12px rgba(16,24,40,.04);
+  }
+  .mobile-trust-icon{
+    width:34px;
+    height:34px;
+    display:grid;
+    place-items:center;
+    border-radius:10px;
+    background:#eef0ff;
+    color:#5b5ce2;
+    font-size:.78rem;
+  }
+  .mobile-trust-item strong{
+    display:block;
+    color:#1d2939;
+    font-size:.70rem;
+    line-height:1.2;
+  }
+  .mobile-trust-item small{
+    display:block;
+    color:#667085;
+    font-size:.58rem;
+    line-height:1.3;
+    margin-top:2px;
+  }
+
+  .mobile-capability-rail{
+    display:flex;
+    gap:6px;
+    overflow-x:auto;
+    padding:2px 0 7px;
+    margin:2px 0 2px;
+    scrollbar-width:none;
+  }
+  .mobile-capability-rail::-webkit-scrollbar{display:none;}
+  .mobile-capability-rail span{
+    flex:0 0 auto;
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    min-height:30px;
+    padding:0 9px;
+    border:1px solid #e2e6ef;
+    background:#fff;
+    border-radius:999px;
+    color:#667085;
+    font-size:.58rem;
+    font-weight:800;
+    white-space:nowrap;
+  }
+  .mobile-capability-rail i{color:#5b5ce2;font-size:.62rem;}
+
+  .client-toolbar{
+    position:sticky;
+    top:0;
+    z-index:100;
+    margin:5px 0 8px;
+    padding:7px 0;
+    background:rgba(245,247,251,.94);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+  }
+  .client-toolbar-left{
+    flex-wrap:nowrap!important;
+    overflow-x:auto;
+    width:100%;
+    gap:6px;
+    scrollbar-width:none;
+  }
+  .client-toolbar-left::-webkit-scrollbar{display:none;}
+  .filter-chip{
+    flex:0 0 auto;
+    min-height:38px;
+    padding:0 11px;
+    font-size:.67rem;
+  }
+  .client-toolbar-right{width:100%;justify-content:flex-end;}
+  .selection-summary{min-height:32px;padding:0 10px;font-size:.68rem;}
+
+  .mobile-workspace-nav{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:6px;
+    position:sticky;
+    top:53px;
+    z-index:99;
+    margin:0 0 7px;
+    padding:4px;
+    background:rgba(245,247,251,.96);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border:1px solid #e3e6ee;
+    border-radius:14px;
+  }
+  .workspace-tab{
+    appearance:none;
+    border:0;
+    background:transparent;
+    min-height:46px;
+    border-radius:11px;
+    color:#667085;
+    font:inherit;
+    display:grid;
+    grid-template-columns:22px minmax(0,1fr);
+    grid-template-rows:auto auto;
+    column-gap:7px;
+    align-items:center;
+    justify-items:start;
+    padding:6px 9px;
+    cursor:pointer;
+  }
+  .workspace-tab i{grid-row:1/3;align-self:center;font-size:.77rem;}
+  .workspace-tab span{font-size:.67rem;font-weight:900;line-height:1;}
+  .workspace-tab small{font-size:.55rem;line-height:1.15;color:#98a2b3;}
+  .workspace-tab.active{
+    background:#fff;
+    color:#5b5ce2;
+    box-shadow:0 3px 9px rgba(16,24,40,.06);
+  }
+  .workspace-tab.active small{color:#5b5ce2;font-weight:900;}
+  .workspace-tab.active{
+    outline:2px solid rgba(91,92,226,.14);
+    outline-offset:-1px;
+    background:linear-gradient(180deg,#ffffff 0%,#f3f2ff 100%);
+  }
+  .workspace-tab.active::after{
+    content:'●';
+    position:absolute;
+    width:5px;
+    height:5px;
+    right:7px;
+    top:7px;
+    border-radius:50%;
+    color:#5b5ce2;
+    font-size:0;
+    background:#5b5ce2;
+    box-shadow:0 0 0 3px rgba(91,92,226,.10);
+  }
+  .workspace-tab{position:relative;}
+  .workspace-helper{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    min-height:25px;
+    margin:0 2px 8px;
+    padding:4px 8px;
+    border-radius:9px;
+    background:#f0f2f8;
+    color:#667085;
+    font-size:.56rem;
+    font-weight:700;
+    text-align:center;
+    line-height:1.2;
+  }
+  .workspace-helper strong{color:#5b5ce2;font-weight:900;}
+  .workspace-helper .workspace-next{color:#98a2b3;}
+
+  .client-grid{
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    gap:10px!important;
+    overflow-x:auto;
+    overflow-y:visible;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    overscroll-behavior-x:contain;
+    scrollbar-width:none;
+    padding-bottom:2px;
+    align-items:stretch;
+  }
+  .client-grid::-webkit-scrollbar{display:none;}
+  .client-grid > .client-panel{
+    flex:0 0 100%;
+    min-width:100%;
+    width:100%;
+    scroll-snap-align:start;
+    scroll-snap-stop:always;
+    box-shadow:0 5px 20px rgba(16,24,40,.05);
+    border-radius:17px;
+  }
+  .client-grid > .album-preview-panel{order:0;}
+  .client-grid > .client-panel:not(.album-preview-panel){order:2;}
+
+  .client-panel-head{
+    padding:12px;
+    gap:8px;
+  }
+  .client-panel-head h3{font-size:.86rem;}
+  .client-panel-head small{font-size:.62rem!important;line-height:1.35;display:block;margin-top:2px;}
+  .gallery-collapse-btn,
+  .album-preview-toggle{
+    min-height:40px!important;
+    height:40px;
+    padding:0 9px!important;
+    border-radius:11px!important;
+    font-size:.64rem!important;
+    flex:0 0 auto;
+  }
+
+  .album-preview-panel{
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+  }
+  .album-preview{
+    flex:1 1 auto;
+    max-height:55vh!important;
+    min-height:160px;
+    overflow:auto;
+    padding:10px!important;
+    -webkit-overflow-scrolling:touch;
+    background:#f9fafc;
+  }
+  .album-preview.is-collapsed{display:none!important;}
+  .album-preview-panel.is-collapsed{
+    min-height:auto;
+  }
+  .pagina-item{
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    gap:7px;
+    padding:9px!important;
+    margin-bottom:8px!important;
+    border-left-width:3px!important;
+    border-radius:13px!important;
+  }
+  .pagina-item .titulo{
+    width:100%;
+    min-width:0;
+    gap:5px!important;
+    align-items:center!important;
+  }
+  .page-number-label{
+    min-height:34px!important;
+    padding:0 9px!important;
+    font-size:.67rem!important;
+  }
+  .layout-visual-btn{
+    min-height:42px!important;
+    height:42px;
+    min-width:118px;
+    padding:2px 6px!important;
+    border-radius:10px!important;
+    font-size:.63rem!important;
+    background:#fff!important;
+  }
+  .layout-visual-btn .thumb-mini{
+    width:36px!important;
+    height:36px!important;
+  }
+  .mobile-layout-count{
+    display:inline-flex;
+    align-items:center;
+    min-height:28px;
+    padding:0 6px;
+    border-radius:999px;
+    background:#f2f4f7;
+    color:#475467;
+    font-size:.58rem;
+    font-weight:900;
+    white-space:nowrap;
+  }
+  .page-bg-btn{
+    min-height:42px!important;
+    height:42px;
+    max-width:124px;
+    padding:0 7px!important;
+    border-radius:10px!important;
+  }
+  .page-bg-btn .page-bg-preview{width:28px!important;height:28px!important;}
+  .page-bg-btn span:last-child{font-size:.58rem!important;white-space:nowrap;}
+  .page-bg-status{font-size:.58rem!important;}
+  .pagina-item .slots{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px!important;
+    width:100%;
+  }
+  .slot-foto,.slot-vazio{
+    min-height:34px;
+    padding:4px 6px!important;
+    border-radius:9px!important;
+    font-size:.57rem!important;
+    min-width:0;
+  }
+  .slot-foto{
+    justify-content:space-between;
+  }
+  .slot-foto .remove-slot{
+    width:28px!important;
+    height:28px!important;
+    flex:0 0 28px!important;
+  }
+
+  .thumbs-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px!important;
+    padding:8px!important;
+    max-height:54vh;
+    overflow-y:auto;
+    overflow-x:hidden;
+    -webkit-overflow-scrolling:touch;
+    align-content:start;
+    scrollbar-width:thin;
+  }
+  .thumbs-grid.gallery-collapsed{
+    max-height:275px!important;
+  }
+  .thumb-item{
+    border-width:1.5px!important;
+    border-radius:13px!important;
+    min-width:0;
+    overflow:hidden;
+  }
+  .thumb-item img{height:122px!important;object-fit:cover!important;}
+  .thumb-item .detail-action{
+    top:6px!important;
+    left:6px!important;
+    width:36px!important;
+    height:36px!important;
+    border-radius:11px!important;
+    font-size:.74rem!important;
+  }
+  /* Modal de atribuição — interação nativa estável no celular. */
+  #modalOverlay{z-index:10000!important;pointer-events:none;}
+  #modalOverlay.active{pointer-events:auto!important;}
+  #modalOverlay .modal-box{
+    position:relative;
+    z-index:10001;
+    width:calc(100vw - 20px)!important;
+    max-width:560px!important;
+    max-height:calc(100svh - 20px)!important;
+    margin:10px;
+    padding:16px!important;
+    overflow-y:auto!important;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+    transform:none!important;
+  }
+  #modalSelectPagina{
+    position:relative;
+    z-index:10002;
+    display:block!important;
+    width:100%!important;
+    min-height:50px!important;
+    margin-top:8px!important;
+    padding:0 12px!important;
+    background:#fff!important;
+    color:#1d2939!important;
+    border:1px solid #cfd5df!important;
+    border-radius:12px!important;
+    font-size:16px!important;
+    line-height:1.2!important;
+    pointer-events:auto!important;
+    touch-action:manipulation!important;
+    appearance:auto!important;
+    -webkit-appearance:menulist!important;
+  }
+  #modalOverlay .modal-actions{
+    position:sticky;
+    bottom:0;
+    z-index:10003;
+    background:#fff;
+    padding-top:10px!important;
+    margin-top:12px!important;
+  }
+
+  .thumb-item .assign-page-action{
+    top:6px!important;
+    right:6px!important;
+    min-height:36px!important;
+    padding:0 8px!important;
+    border-radius:10px!important;
+    font-size:.60rem!important;
+  }
+  .thumb-item .select-mark{
+    left:6px!important;
+    bottom:40px!important;
+    width:30px!important;
+    height:30px!important;
+    font-size:20px!important;
+  }
+  .thumb-item .info{
+    min-height:39px!important;
+    padding:6px 7px!important;
+    font-size:.58rem!important;
+  }
+
+  .sticky-actions{
+    z-index:1500;
+    padding:7px 10px calc(8px + env(safe-area-inset-bottom))!important;
+  }
+  .sticky-actions-inner{
+    display:grid!important;
+    grid-template-columns:1fr;
+    gap:6px!important;
+  }
+  .sticky-hint{
+    font-size:.61rem!important;
+    line-height:1.2;
+    white-space:normal!important;
+    text-align:center;
+  }
+  .sticky-main{
+    width:100%;
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:6px!important;
+  }
+  .sticky-main .btn-client{
+    width:100%!important;
+    min-height:44px!important;
+    padding:0 8px!important;
+    font-size:.67rem!important;
+    border-radius:11px!important;
+    white-space:nowrap;
+  }
+  .sticky-main .btn-client:last-child{grid-column:span 2;}
+  .sticky-main .btn-client::after{content:none!important;}
+
+  /* Modais importantes: viram sheets fixos, nunca ficam "lá no final" do documento. */
+  .modal-overlay{
+    position:fixed!important;
+    inset:0!important;
+    z-index:5000!important;
+    align-items:flex-end!important;
+    justify-content:center!important;
+    padding:7px!important;
+    overflow:hidden!important;
+  }
+  .modal-overlay.active .modal-box{transform:translateY(0)!important;}
+  .modal-box{
+    width:100%!important;
+    max-width:680px!important;
+    max-height:88svh!important;
+    margin:0!important;
+    padding:15px!important;
+    border-radius:21px 21px 14px 14px!important;
+    overflow:auto!important;
+    overscroll-behavior:contain;
+  }
+  .modal-box h3{font-size:1rem!important;line-height:1.2;}
+  .modal-box .modal-actions{
+    gap:7px!important;
+    margin-top:12px!important;
+  }
+  #modalOverlay .modal-box .modal-foto img{width:68px!important;height:68px!important;}
+  #modalOverlay{
+    isolation:isolate;
+  }
+  #modalOverlay .modal-box,
+  #modalOverlay .modal-box *{
+    pointer-events:auto;
+  }
+  #modalOverlay .modal-box #modalSelectPagina{
+    width:100%!important;
+    min-height:48px!important;
+    height:48px!important;
+    font-size:16px!important;
+    line-height:48px!important;
+    appearance:auto!important;
+    -webkit-appearance:auto!important;
+    touch-action:manipulation!important;
+    position:relative;
+    z-index:3;
+  }
+  #modalOverlay .modal-box{
+    background:#fff!important;
+    color:#1d2939!important;
+    border-color:#dfe3eb!important;
+    box-shadow:0 20px 50px rgba(16,24,40,.18)!important;
+  }
+  #modalOverlay .modal-box h3,
+  #modalOverlay .modal-box label,
+  #modalOverlay .modal-box #modalFotoNome{
+    color:#1d2939!important;
+  }
+  #modalOverlay .modal-box .modal-foto{
+    background:#f8f9fc;
+    border:1px solid #e4e7ec;
+    border-radius:13px;
+    padding:8px;
+  }
+  #modalOverlay .modal-box #modalMatches,
+  #modalOverlay .modal-box #modalIaInfo{
+    color:#475467!important;
+  }
+  #modalOverlay .modal-box .ref-list,
+  #modalOverlay .modal-box .ia-info{
+    background:#f8f9fc!important;
+    color:#344054!important;
+    border:1px solid #e4e7ec!important;
+  }
+  #modalOverlay .modal-box .ref-item-match,
+  #modalOverlay .modal-box .ia-row{
+    color:#475467!important;
+    border-color:#e4e7ec!important;
+  }
+  #modalOverlay .modal-box #modalSelectPagina{
+    background:#fff!important;
+    color:#1d2939!important;
+    border:1px solid #cfd5df!important;
+    border-radius:11px!important;
+    padding:0 12px!important;
+  }
+  #modalOverlay .modal-box #modalBtnCancelar{
+    background:#fff!important;
+    color:#475467!important;
+    border:1px solid #d7dbe5!important;
+  }
+  #modalOverlay .modal-box::before{
+    content:'';
+    display:block;
+    width:38px;
+    height:4px;
+    margin:0 auto 9px;
+    border-radius:999px;
+    background:#d9deea;
+  }
+  #modalOverlay .modal-box .modal-actions{
+    display:grid!important;
+    grid-template-columns:1fr 1.2fr 1fr;
+    position:sticky;
+    bottom:-15px;
+    background:#fff;
+    padding-top:9px;
+  }
+  #modalOverlay .modal-box .modal-actions .btn{
+    width:100%;
+    min-height:44px;
+    padding:0 6px;
+    font-size:.63rem;
+    border-radius:10px;
+  }
+  #modalLayoutSelector .modal-box{
+    max-width:500px!important;
+  }
+  #modalLayoutSelector .layout-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:7px!important;
+    max-height:58svh!important;
+    overflow:auto!important;
+    margin:9px 0!important;
+  }
+  #modalLayoutSelector .layout-btn{
+    min-height:108px!important;
+    padding:7px 4px!important;
+    border-radius:11px!important;
+  }
+  #modalLayoutSelector .layout-btn .thumb-container{
+    width:68px!important;
+    height:68px!important;
+  }
+  #modalLayoutSelector .layout-btn .layout-label{
+    font-size:.61rem!important;
+  }
+  #modalAgenteOverlay .modal-box,
+  #modalVersionHistory .modal-box{
+    max-height:90svh!important;
+  }
+  .wizard-modal .modal-box{
+    max-width:680px!important;
+    max-height:90svh!important;
+    padding:13px!important;
+  }
+  .wizard-stepper{
+    grid-template-columns:repeat(5,minmax(82px,1fr))!important;
+    overflow-x:auto;
+    margin-bottom:10px!important;
+  }
+  .wizard-step{font-size:.58rem!important;min-height:32px!important;}
+  .wizard-option,.role-card,.smart-option{border-radius:13px!important;}
+  .wizard-grid{grid-template-columns:1fr!important;}
+  .role-grid{max-height:none!important;}
+
+  /* Fundo por página: sheet alto e confortável para toque. */
+  #pageBgDialog{
+    position:fixed!important;
+    inset:auto 0 0 0!important;
+    width:100%!important;
+    max-width:none!important;
+    height:min(84svh,720px)!important;
+    max-height:84svh!important;
+    margin:0!important;
+    border:0!important;
+    border-radius:22px 22px 0 0!important;
+    box-shadow:0 -18px 45px rgba(16,24,40,.20);
+  }
+  #pageBgDialog::backdrop{background:rgba(15,23,42,.34)!important;backdrop-filter:blur(5px);}
+  .theme-bg-header{padding:14px!important;}
+  .theme-bg-title{font-size:1.05rem!important;}
+  .theme-bg-subtitle{font-size:.66rem!important;line-height:1.35;}
+  .theme-bg-toolbar{padding:8px 10px!important;}
+  .theme-bg-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px!important;
+    padding:10px!important;
+  }
+  .theme-bg-card{border-radius:12px!important;}
+  .theme-bg-thumb{aspect-ratio:4/3!important;}
+  .theme-bg-meta{padding:6px 7px!important;}
+  .theme-bg-name{font-size:.61rem!important;}
+  .theme-bg-theme{font-size:.55rem!important;}
+  .theme-bg-footer{
+    padding:8px 10px calc(8px + env(safe-area-inset-bottom))!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:7px!important;
+  }
+  .theme-bg-actions{display:grid!important;grid-template-columns:1fr 1fr 1.25fr!important;gap:6px!important;}
+  .theme-bg-actions button{min-height:44px!important;font-size:.63rem!important;}
+
+  /* Captura de rosto também recebe alça de sheet. */
+  #modalCapturaRef .modal-box{
+    max-height:88svh!important;
+  }
+
+  /* O tutorial vira ajuda contextual, e não um painel que domina a tela. */
+  .tutorial-panel{
+    width:calc(100vw - 16px)!important;
+    max-height:82svh!important;
+    padding:14px!important;
+    border-radius:20px!important;
+  }
+  .tutorial-head{gap:8px!important;}
+  .tutorial-head h3{font-size:1rem!important;}
+  .tutorial-head p{font-size:.68rem!important;line-height:1.35!important;}
+  .tutorial-detail{max-height:38svh!important;overflow:auto;}
+  .tutorial-actions{gap:6px!important;}
+  .tutorial-actions .btn-client{min-height:44px!important;font-size:.63rem!important;padding:0 8px!important;}
+
+  /* 3D: ocupa a tela sem exigir zoom. */
+  .modal-3d-overlay{z-index:7000!important;padding:6px!important;}
+  .modal-3d-box{
+    width:100%!important;
+    height:calc(100svh - 12px)!important;
+    max-width:none!important;
+    max-height:none!important;
+    border-radius:19px!important;
+    padding:8px!important;
+    overflow:hidden!important;
+  }
+  .modal-3d-header h2{font-size:.93rem!important;}
+  .book-wrapper{min-height:0!important;flex:1 1 auto;padding:4px 0!important;overflow:hidden;}
+  .nav-3d{
+    flex:0 0 auto;
+    gap:6px!important;
+    padding-top:6px!important;
+  }
+  .nav-3d button{
+    min-height:42px!important;
+    padding:0 10px!important;
+    font-size:.64rem!important;
+    border-radius:10px!important;
+  }
+  .preview-info-area{max-height:145px;overflow:auto;padding-top:6px!important;}
+  .preview-info-copy p{font-size:.66rem!important;}
+  .client-note-field label{font-size:.66rem!important;}
+  .client-note-field textarea{min-height:58px!important;font-size:16px!important;}
+
+  input,select,textarea{font-size:16px!important;}
+}
+
+/* Um pouco mais de conforto para celulares muito estreitos. */
+@media (max-width:390px){
+  .access-tab{min-height:118px!important;}
+  .access-tab .access-icon{width:31px;height:31px;}
+  .access-tab strong{font-size:.64rem;}
+  .access-tab span{font-size:.54rem;}
+  .thumb-item img{height:112px!important;}
+  #modalLayoutSelector .layout-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+
+/* ==========================================================
+   FLUXO GUIADO — ÁLBUM DO CLIENTE
+   ========================================================== */
+body.guided-entry-lock{overflow:hidden!important}
+body.guided-started .access-process{display:none!important}
+
+.guided-entry{
+  position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;padding:16px;
+  background:radial-gradient(circle at 50% 8%,rgba(99,102,241,.16),transparent 36%),
+             radial-gradient(circle at 10% 90%,rgba(212,175,55,.10),transparent 28%),rgba(5,7,12,.96);
+  backdrop-filter:blur(11px)
+}
+.guided-entry[hidden]{display:none!important}
+.guided-entry-shell{
+  width:min(1120px,100%);max-height:min(94vh,920px);overflow:auto;border:1px solid rgba(255,255,255,.1);
+  border-radius:26px;background:linear-gradient(180deg,#171c25 0%,#10141b 100%);box-shadow:0 40px 110px rgba(0,0,0,.6)
+}
+.guided-entry-top{padding:26px 28px 18px;border-bottom:1px solid rgba(255,255,255,.07)}
+.guided-kicker{display:inline-flex;align-items:center;gap:7px;color:#f3d98a;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+.guided-entry-top h2{margin:0 0 8px;padding:0;border:0;color:#fff;font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.04}
+.guided-entry-top p{margin:0;max-width:840px;color:#aeb7c6;font-size:.92rem;line-height:1.52}
+.guided-entry-trust{margin-top:14px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.guided-entry-trust div{padding:10px 11px;border-radius:13px;border:1px solid rgba(255,255,255,.07);background:#0d1117}
+.guided-entry-trust strong{display:block;color:#fff;font-size:.69rem}
+.guided-entry-trust span{display:block;color:#818b9c;font-size:.62rem;margin-top:3px;line-height:1.35}
+.guided-mode-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;padding:18px 28px 10px}
+.guided-mode-card{
+  display:flex;flex-direction:column;min-height:285px;padding:18px;border-radius:20px;border:1px solid rgba(255,255,255,.08);
+  background:#191e27;box-shadow:0 10px 28px rgba(0,0,0,.16);transition:transform .18s,border-color .18s
+}
+.guided-mode-card:hover{transform:translateY(-3px);border-color:rgba(99,102,241,.5)}
+.guided-mode-icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;margin-bottom:12px;font-size:1.05rem}
+.guided-mode-card.manual .guided-mode-icon{background:rgba(99,102,241,.13);color:#cdd2ff}
+.guided-mode-card.suggested .guided-mode-icon{background:rgba(212,175,55,.13);color:#f3d98a}
+.guided-mode-card.auto .guided-mode-icon{background:rgba(34,201,181,.12);color:#9ce8cf}
+.guided-mode-card h3{margin:0 0 6px;color:#fff;font-size:1rem}
+.guided-mode-card .mode-best{color:#f6e7b0;font-size:.68rem;font-weight:800;margin-bottom:7px}
+.guided-mode-card p{margin:0;color:#aeb7c6;font-size:.74rem;line-height:1.5}
+.guided-mode-flow{margin-top:auto;padding-top:14px;color:#9aa5b5;font-size:.66rem;line-height:1.45}
+.guided-mode-select{
+  margin-top:13px;width:100%;border:0;border-radius:999px;padding:10px 13px;background:#242b39;color:#fff;
+  font-weight:800;font-size:.72rem;cursor:pointer
+}
+.guided-mode-card.manual .guided-mode-select:hover{background:#6366f1}
+.guided-mode-card.suggested .guided-mode-select:hover{background:#d4af37;color:#0b0e14}
+.guided-mode-card.auto .guided-mode-select:hover{background:#22c9b5;color:#07110f}
+.guided-entry-warning{
+  margin:8px 28px 18px;padding:13px 15px;border-radius:15px;border:1px solid rgba(212,175,55,.25);
+  background:rgba(212,175,55,.07);color:#e7d9ab;font-size:.73rem;line-height:1.5
+}
+.guided-entry-warning strong{color:#fff}
+.guided-entry-footer{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 28px 20px;
+  border-top:1px solid rgba(255,255,255,.07);background:rgba(16,20,27,.94)
+}
+.guided-entry-footer small{color:#818b9c;font-size:.64rem;line-height:1.4}
+.guided-entry-help{display:none!important}.guided-change-mode{
+  border:1px solid rgba(255,255,255,.1);border-radius:999px;background:#171c25;color:#e4e9f1;
+  padding:9px 13px;cursor:pointer;font-weight:700;font-size:.68rem;white-space:nowrap
+}
+.guided-entry-help:hover,.guided-change-mode:hover{border-color:#6366f1}
+
+.guided-flow-panel{
+  margin:18px 0 16px;border:1px solid rgba(99,102,241,.20);border-radius:20px;
+  background:linear-gradient(145deg,rgba(99,102,241,.075),rgba(212,175,55,.045) 55%,rgba(255,255,255,.018));
+  overflow:hidden;box-shadow:0 16px 36px rgba(0,0,0,.16)
+}
+.guided-flow-head{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 18px 12px;border-bottom:1px solid rgba(255,255,255,.07)}
+.guided-flow-title{display:flex;align-items:center;gap:10px;min-width:0}
+.guided-flow-badge{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:11px;background:rgba(99,102,241,.16);color:#cdd2ff;flex:0 0 auto}
+.guided-flow-copy strong{display:block;color:#fff;font-size:.92rem}
+.guided-flow-copy span{display:block;color:#8f9aac;font-size:.72rem;margin-top:2px}
+.guided-flow-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:14px 18px 8px}
+.guided-flow-step{min-width:0;padding:10px 11px;border:1px solid rgba(255,255,255,.07);border-radius:13px;background:rgba(13,17,23,.72);color:#8f9aac}
+.guided-flow-step .n{width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:#222936;color:#aeb7c6;font-size:.65rem;font-weight:800;margin-bottom:7px}
+.guided-flow-step strong{display:block;color:#d9dee8;font-size:.71rem;line-height:1.25}
+.guided-flow-step span{display:block;margin-top:3px;font-size:.64rem;line-height:1.35}
+.guided-flow-step.active{border-color:rgba(212,175,55,.34);background:rgba(212,175,55,.065)}
+.guided-flow-step.active .n{background:#d4af37;color:#0b0e14}
+.guided-flow-step.done{border-color:rgba(34,201,181,.22);background:rgba(34,201,181,.05)}
+.guided-flow-step.done .n{background:#22c9b5;color:#0b0e14}
+.guided-flow-note{margin:8px 18px 16px;padding:11px 13px;border-radius:13px;background:#0c1017;border:1px solid rgba(255,255,255,.07);color:#aeb7c6;font-size:.73rem;line-height:1.48}
+.guided-flow-note strong{color:#fff}
+.guided-final-bar{display:none;align-items:center;justify-content:space-between;gap:12px;margin:0 18px 16px;padding:12px 14px;border-radius:15px;border:1px solid rgba(34,201,181,.20);background:rgba(34,201,181,.055)}
+body.guided-ready .guided-final-bar{display:flex}
+.guided-final-bar-copy strong{display:block;color:#fff;font-size:.76rem}
+.guided-final-bar-copy span{display:block;color:#8f9aac;font-size:.66rem;margin-top:2px}
+.guided-final-btn{border:0;border-radius:999px;padding:9px 14px;background:#22c9b5;color:#07110f;font-size:.72rem;font-weight:800;cursor:pointer;white-space:nowrap}
+@media (max-width:820px){
+  .guided-mode-cards{grid-template-columns:1fr}.guided-mode-card{min-height:0}.guided-entry-trust{grid-template-columns:1fr}
+  .guided-flow-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:520px){
+  .guided-entry{padding:6px;align-items:stretch}.guided-entry-shell{max-height:100%;border-radius:19px}
+  .guided-entry-top,.guided-mode-cards,.guided-entry-footer{padding-left:15px;padding-right:15px}
+  .guided-entry-warning{margin-left:15px;margin-right:15px}.guided-entry-footer{flex-direction:column;align-items:stretch}
+  .guided-entry-help{width:100%}.guided-flow-head{align-items:flex-start}
+}
+
+
+/* ===== AJUSTES UX SOLICITADOS ===== */
+.guided-change-mode{
+  min-height:42px!important;
+  padding:10px 16px!important;
+  background:linear-gradient(135deg,#d4af37,#e7c85b)!important;
+  color:#0b0e14!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+  box-shadow:0 7px 18px rgba(212,175,55,.22)!important;
+  font-size:.76rem!important;
+  font-weight:850!important;
+  letter-spacing:.01em;
+}
+.guided-change-mode:hover{
+  background:linear-gradient(135deg,#e2c45a,#f0d87a)!important;
+  color:#070a0f!important;
+  border-color:rgba(255,255,255,.28)!important;
+  box-shadow:0 10px 24px rgba(212,175,55,.30)!important;
+  transform:translateY(-1px);
+}
+.guided-change-mode i{font-size:.82rem!important}
+#guidedEntryTutorial{display:none!important}
+
+/* Modal de detalhes da foto — visual claro, próprio para cliente */
+#modalOverlay .modal-box{
+  background:#fff!important;
+  color:#111827!important;
+  border:1px solid #e5e7eb!important;
+  box-shadow:0 26px 65px rgba(15,23,42,.24)!important;
+}
+#modalOverlay .modal-box h3,
+#modalOverlay .modal-box label,
+#modalOverlay .modal-box #modalFotoNome{
+  color:#111827!important;
+}
+#modalOverlay .modal-box p,
+#modalOverlay .modal-box .status-msg{
+  color:#475467!important;
+}
+#modalOverlay .modal-box .modal-foto{
+  background:#f8fafc!important;
+  border-color:#e5e7eb!important;
+}
+#modalOverlay .modal-box .ref-list,
+#modalOverlay .modal-box .ia-info{
+  background:#f8fafc!important;
+  color:#344054!important;
+  border:1px solid #e5e7eb!important;
+}
+#modalOverlay .modal-box .ref-item-match,
+#modalOverlay .modal-box .ia-row{
+  color:#344054!important;
+  border-color:#e5e7eb!important;
+}
+#modalOverlay .modal-box #modalSelectPagina{
+  background:#fff!important;
+  color:#111827!important;
+  border:1px solid #cbd5e1!important;
+}
+#modalOverlay .modal-box #modalBtnCancelar{
+  background:#fff!important;
+  color:#334155!important;
+  border:1px solid #cbd5e1!important;
+}
+#modalOverlay .modal-box .modal-actions{
+  background:#fff!important;
+}
+#modalOverlay .modal-actions{
+  align-items:stretch;
+}
+#modalOverlay .modal-page-actions{
+  display:contents;
+}
+#modalOverlay .modal-favorite-action{
+  display:none;
+  background:#fff8db!important;
+  border:1px solid #d4af37!important;
+  color:#8a6a00!important;
+  min-width:150px;
+}
+#modalOverlay .modal-favorite-action:hover{
+  background:#fff1b0!important;
+  border-color:#b38f20!important;
+}
+#modalOverlay .modal-favorite-action.ativo{
+  background:#d4af37!important;
+  border-color:#d4af37!important;
+  color:#111827!important;
+}
+#modalOverlay .modal-page-controls[hidden],
+#modalOverlay .modal-page-actions[hidden],
+#modalOverlay .modal-favorite-action[hidden]{
+  display:none!important;
+}
+.mode-suggested #modalOverlay .modal-favorite-action{
+  display:inline-flex!important;
+}
+.mode-suggested #modalOverlay .modal-page-controls,
+.mode-suggested #modalOverlay .modal-page-actions{
+  display:none!important;
+}
+@media (max-width:700px){
+  #modalOverlay .modal-favorite-action{
+    min-width:0;
+  }
+}
+
+</style>
+</head>
         <body>
+
+<div class="guided-entry guided-entry-lock" id="guidedEntry" role="dialog" aria-modal="true" aria-labelledby="guidedEntryTitle">
+  <div class="guided-entry-shell">
+    <header class="guided-entry-top">
+      <div class="guided-kicker">
+  <i class="fa-solid fa-compass" aria-hidden="true"></i>
+  Antes de começar
+</div>
+      <h2 id="guidedEntryTitle">Vamos montar seu álbum do seu jeito.</h2>
+      <p>Você não precisa saber como funciona a montagem. Escolha quanto quer participar: montar página por página, escolher suas favoritas e receber sugestões, ou deixar o sistema fazer a curadoria.</p>
+      <div class="guided-entry-trust">
+        <div><strong>↩️ Pode voltar</strong><span>Teste e mude suas escolhas quando quiser.</span></div>
+        <div><strong>💾 Seu progresso fica salvo</strong><span>Continue depois no mesmo navegador.</span></div>
+        <div><strong>🎯 Revisão antes de finalizar</strong><span>Veja a montagem antes de gerar a seleção.</span></div>
+      </div>
+    </header>
+
+    <section class="guided-mode-cards" aria-label="Escolha o modo de montagem">
+      <article class="guided-mode-card manual">
+        <div class="guided-mode-icon"><i class="fas fa-hand-pointer"></i></div>
+        <h3>Montagem Manual</h3>
+        <div class="mode-best">Para quem quer controlar cada página</div>
+        <p>Você escolhe a foto, define em qual página ela entra, escolhe o layout e pode selecionar o fundo.</p>
+        <div class="guided-mode-flow">📸 Foto → 📖 Página → 🖼️ Layout → 🎨 Fundo → 👀 Revisão</div>
+        <button class="guided-mode-select" type="button" data-guided-start="manual">Quero montar página por página <i class="fas fa-arrow-right"></i></button>
+      </article>
+
+      <article class="guided-mode-card suggested">
+        <div class="guided-mode-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+        <h3>Montagem Sugerida</h3>
+        <div class="mode-best">Para quem quer escolher as fotos e receber ajuda</div>
+        <p>Você apenas marca as Estrelas nas fotos que gostou, responde às preferências e recebe propostas de montagem para escolher e editar.</p>
+        <div class="guided-mode-flow">⭐ Favoritas → ✨ Preferências → 📖 Propostas → ✅ Escolha → 👀 Revisão</div>
+        <button class="guided-mode-select" type="button" data-guided-start="sugerida">Quero receber sugestões <i class="fas fa-arrow-right"></i></button>
+      </article>
+
+      <article class="guided-mode-card auto">
+        <div class="guided-mode-icon"><i class="fas fa-robot"></i></div>
+        <h3>Curadoria Automática</h3>
+        <div class="mode-best">Para quem prefere deixar o sistema ajudar</div>
+        <p>O sistema usa a galeria completa e suas preferências para criar a curadoria. Você orienta o que é importante.</p>
+        <div class="guided-mode-flow">👥 Pessoas → ❤️ Preferências → 🤖 Curadoria → 📖 Resultado → 👀 Revisão</div>
+        <button class="guided-mode-select" type="button" data-guided-start="automatica">Quero deixar o sistema montar <i class="fas fa-arrow-right"></i></button>
+      </article>
+    </section>
+
+    <div class="guided-entry-warning">
+      <strong>⚠️ Sobre as molduras:</strong> na prévia algumas fotos podem aparecer cortadas, aproximadas ou fora do enquadramento ideal.
+      <strong>Não se preocupe:</strong> a montagem original será ajustada e enviada para aprovação. Ainda assim, observe se o layout combina com a foto, pois certos formatos valorizam mais algumas imagens.
+    </div>
+
+    <footer class="guided-entry-footer">
+      <small>💡 Você pode trocar de modo depois. Primeiro escolha o caminho mais confortável para você.</small>
+      <button class="guided-entry-help" id="guidedEntryTutorial" type="button"><i class="fas fa-circle-play"></i> Entender tudo antes de começar</button>
+    </footer>
+  </div>
+</div>
+
         <div class="container">
           <div class="client-topbar">
             <div class="client-brand">
-              <div class="client-logo" aria-hidden="true"><i class="fas fa-images"></i></div>
+              <div class="client-logo" aria-hidden="true">
+                <svg class="logo-mark" viewBox="0 0 32 32" role="img" aria-hidden="true">
+                  <rect class="frame" x="5" y="6" width="22" height="20" rx="5"></rect>
+                  <circle class="lens" cx="16" cy="16" r="6.1"></circle>
+                  <circle class="shine" cx="18.2" cy="13.8" r="1.35"></circle>
+                  <path class="frame" d="M11 6.6l1.6-2.4h6.8L21 6.6"></path>
+                </svg>
+              </div>
               <div>
                 <h1>Escolha as fotos do seu álbum <small></small></h1>
                 <p>Você decide o que é mais importante. O sistema ajuda a organizar tudo.</p>
@@ -4033,7 +6193,7 @@
 
           <section class="client-hero">
             <h2>Escolha como você quer montar seu álbum.</h2>
-            <p>Você pode montar página por página, escolher suas fotos favoritas para receber sugestões ou deixar a curadoria automática conduzir a seleção e a montagem.</p>
+            <p>Você escolhe como quer montar: página por página, com sugestões ou com curadoria automática. Seu progresso fica salvo neste navegador enquanto a seleção continuar aqui.</p>
             <div class="client-progress" aria-label="Etapas da personalização">
               <div class="client-step active" id="progressStep1"></div>
               <div class="client-step" id="progressStep2"></div>
@@ -4043,28 +6203,90 @@
             </div>
           </section>
 
-          <section class="access-process" aria-label="Processo de montagem">
+          
+<section class="guided-flow-panel" id="guidedFlowPanel" aria-label="Seu caminho de montagem">
+  <div class="guided-flow-head">
+    <div class="guided-flow-title">
+      <span class="guided-flow-badge" id="guidedFlowIcon"><i class="fas fa-compass"></i></span>
+      <div class="guided-flow-copy">
+        <strong id="guidedFlowTitle">Escolha um caminho para começar</strong>
+        <span id="guidedFlowSubtitle">Depois de escolher, o sistema mostra o próximo passo.</span>
+      </div>
+    </div>
+    <button class="guided-change-mode" id="guidedChangeMode" type="button"><i class="fas fa-shuffle"></i> Trocar modelo</button>
+  </div>
+  <div class="guided-flow-steps" id="guidedFlowSteps">
+    <div class="guided-flow-step active"><span class="n">1</span><strong>Escolher</strong><span>Defina o caminho.</span></div>
+    <div class="guided-flow-step"><span class="n">2</span><strong>Montar</strong><span>Escolha e organize.</span></div>
+    <div class="guided-flow-step"><span class="n">3</span><strong>Revisar</strong><span>Confira tudo.</span></div>
+    <div class="guided-flow-step"><span class="n">4</span><strong>Gerar</strong><span>Envie para aprovação.</span></div>
+  </div>
+  <div class="guided-flow-note" id="guidedFlowNote"><strong>Como funciona:</strong> primeiro escolha o modo. Depois o sistema conduz o restante.</div>
+  <div class="guided-final-bar" id="guidedFinalBar">
+    <div class="guided-final-bar-copy">
+      <strong>✅ Sua montagem está pronta para a revisão final.</strong>
+      <span>Confira a prévia e, quando estiver satisfeito, gere a seleção.</span>
+    </div>
+    <button class="guided-final-btn" id="guidedFinalBtn" type="button"><i class="fas fa-file-lines"></i> Gerar seleção</button>
+  </div>
+</section>
+
+<section class="access-process" aria-label="Processo de montagem">
             <div class="access-process-head">
               <div>
                 <div class="access-process-title">Como você quer montar seu álbum?</div>
-                <div class="access-process-copy">Escolha um dos três caminhos. O sistema reaproveita a mesma galeria, montagem, layouts e curadoria que já existem.</div>
+                <div class="access-process-copy">Escolha um caminho agora. Você pode trocar de modo depois sem perder o que já fez.</div>
               </div>
             </div>
             <div class="access-tabs" role="tablist" aria-label="Modo de montagem">
               <button class="access-tab active" type="button" role="tab" aria-selected="true" data-access-mode="manual" id="accessTabManual">
                 <span class="access-icon"><i class="fas fa-hand-pointer" aria-hidden="true"></i></span>
-                <span><strong>Montagem Manual</strong><span>Escolha as fotos, indique a página e selecione o layout.</span></span>
+                <span><strong>Montagem Manual</strong><span>Você escolhe a foto, a página e o desenho do layout.</span></span>
               </button>
               <button class="access-tab" type="button" role="tab" aria-selected="false" data-access-mode="sugerida" id="accessTabSugerida">
                 <span class="access-icon"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></span>
-                <span><strong>Montagem Sugerida</strong><span>Você escolhe as fotos favoritas e a curadoria monta as propostas.</span></span>
+                <span><strong>Montagem Sugerida</strong><span>Você marca suas favoritas e recebe 3 propostas de montagem.</span></span>
               </button>
               <button class="access-tab" type="button" role="tab" aria-selected="false" data-access-mode="automatica" id="accessTabAutomatica">
                 <span class="access-icon"><i class="fas fa-robot" aria-hidden="true"></i></span>
-                <span><strong>Curadoria Automática</strong><span>A Curadoria Inteligente baseada nas suas preferências montará o álbum ideal.</span></span>
+                <span><strong>Curadoria Automática</strong><span>A galeria completa e suas preferências conduzem a curadoria.</span></span>
               </button>
             </div>
           </section>
+
+          <div class="mobile-trust-row" aria-label="Informações importantes">
+            <div class="mobile-trust-item">
+              <span class="mobile-trust-icon"><i class="fas fa-cloud-arrow-up" aria-hidden="true"></i></span>
+              <span><strong>Seu progresso fica salvo</strong><small>Você pode sair e voltar depois, desde que não limpe os dados do navegador.</small></span>
+            </div>
+            <div class="mobile-trust-item">
+              <span class="mobile-trust-icon"><i class="fas fa-sliders" aria-hidden="true"></i></span>
+              <span><strong>Você pode mudar tudo</strong><small>Fotos, páginas, layouts e fundos podem ser ajustados antes de enviar.</small></span>
+            </div>
+          </div>
+
+          <div class="mobile-capability-rail" aria-label="O que você pode personalizar">
+            <span><i class="fas fa-table-cells-large" aria-hidden="true"></i> Fotos por página</span>
+            <span><i class="fas fa-right-left" aria-hidden="true"></i> Trocar ou retirar</span>
+            <span><i class="fas fa-swatchbook" aria-hidden="true"></i> Fundo por página</span>
+            <span><i class="fas fa-floppy-disk" aria-hidden="true"></i> Salvamento automático</span>
+          </div>
+
+          <nav class="mobile-workspace-nav" aria-label="Área de trabalho">
+            <button type="button" class="workspace-tab active" data-workspace="preview">
+              <i class="fas fa-book-open" aria-hidden="true"></i>
+              <span>Prévia</span>
+              <small>Montagem</small>
+            </button>
+            <button type="button" class="workspace-tab" data-workspace="photos">
+              <i class="fas fa-images" aria-hidden="true"></i>
+              <span>Fotos</span>
+              <small id="workspacePhotosCount">Galeria</small>
+            </button>
+          </nav>
+          <div class="workspace-helper" id="workspaceHelper" aria-live="polite">
+            Você está em <strong>Prévia</strong> · <span class="workspace-next">ao lado: Fotos →</span>
+          </div>
 
           <div class="client-toolbar">
             <div class="client-toolbar-left" id="filterBar">
@@ -4086,7 +6308,7 @@
               <div class="client-panel-head">
                 <div>
                   <h3>📷 Suas fotos</h3>
-                  <small id="galleryHint" style="color:var(--client-muted);">Toque na foto para selecionar. Use “Página” para atribuir manualmente a uma página.</small>
+                  <small id="galleryHint" style="color:var(--client-muted);">Toque na foto para marcar como favorita. No Manual, use “Página” para escolher onde ela entra.</small>
                 </div>
                 <button class="gallery-collapse-btn" id="btnRecolherGaleria" type="button" aria-expanded="true">
                   <i class="fas fa-compress-alt" aria-hidden="true"></i>
@@ -4099,7 +6321,7 @@
 
             <section class="client-panel album-preview-panel" id="albumPreviewPanel">
               <div class="client-panel-head">
-                <div><h3>📖 Prévia do álbum</h3><small id="albumHint" style="color:var(--client-muted);">A montagem aparece aqui quando você selecionar. Escolha quantas fotos por página selecionando a moldura.</small></div>
+                <div><h3>📖 Prévia do álbum</h3><small id="albumHint" style="color:var(--client-muted);">Esta é sua área de montagem. Toque no layout para escolher quantas fotos entram, retire ou troque fotos e escolha um fundo para cada página.</small></div>
                 <button class="album-preview-toggle" id="btnRecolherAlbum" type="button" aria-expanded="true">
                   <i class="fas fa-chevron-up" aria-hidden="true"></i><span>Recolher prévia</span>
                 </button>
@@ -4124,12 +6346,39 @@
             <div class="sticky-hint" id="stickyHint">Selecione as fotos que você deseja no álbum.</div>
             <div class="sticky-main">
               <button class="btn-client btn-client-primary" id="btnGerarSugestoes"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> Montagem sugerida</button>
-              <button class="btn-client btn-client-gold" id="btnGerarTXT"><i class="fas fa-file-lines" aria-hidden="true"></i> Gerar TXT</button>
-              <button class="btn-client btn-client-light" id="btnResetar"><i class="fas fa-rotate-left" aria-hidden="true"></i> Resetar seleção</button>
+              <button class="btn-client btn-client-gold" id="btnGerarTXT"><i class="fas fa-file-lines" aria-hidden="true"></i> Gerar seleção para aprovação</button>
+              <button class="btn-client btn-client-light" id="btnResetar"><i class="fas fa-rotate-left" aria-hidden="true"></i> Recomeçar seleção</button>
               <button class="btn-client btn-client-purple" id="btnVisualizar3D"><i class="fas fa-book-open" aria-hidden="true"></i> Visualizar montagem</button>
             </div>
           </div>
         </div>
+
+        <!-- MODAL DE FUNDOS DA PÁGINA — FUNDO DO TEMA ENVIADO PELO CRIADOR -->
+        <dialog class="theme-background-dialog" id="pageBgDialog" aria-labelledby="pageBgDialogTitle">
+          <div class="theme-bg-shell">
+            <header class="theme-bg-header">
+              <div>
+                <div class="theme-bg-kicker"><i class="fas fa-swatchbook" aria-hidden="true"></i> Tema do criador</div>
+                <h2 class="theme-bg-title" id="pageBgDialogTitle">Escolha o fundo da página</h2>
+                <p class="theme-bg-subtitle">O fundo escolhido será aplicado somente à página selecionada e ficará salvo no álbum virtual.</p>
+              </div>
+              <button class="theme-bg-close" id="pageBgClose" type="button" aria-label="Fechar seleção de fundo" title="Fechar"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+            </header>
+            <div class="theme-bg-toolbar">
+              <span class="theme-bg-page-pill" id="pageBgPageLabel"><i class="fas fa-file-lines" aria-hidden="true"></i> Página —</span>
+              <span class="theme-bg-selected-pill" id="pageBgSelectedLabel"><i class="fas fa-circle-info" aria-hidden="true"></i> Nenhum fundo selecionado</span>
+            </div>
+            <main class="theme-bg-grid" id="pageBgGrid" tabindex="-1"></main>
+            <footer class="theme-bg-footer">
+              <div class="theme-bg-footer-note" id="pageBgThemeLabel">Tema enviado pelo criador</div>
+              <div class="theme-bg-actions">
+                <button class="theme-bg-action secondary" id="pageBgClear" type="button"><i class="fas fa-eraser" aria-hidden="true"></i> Sem fundo</button>
+                <button class="theme-bg-action secondary" id="pageBgCancel" type="button">Cancelar</button>
+                <button class="theme-bg-action primary" id="pageBgApply" type="button" disabled><i class="fas fa-check" aria-hidden="true"></i> Aplicar fundo</button>
+              </div>
+            </footer>
+          </div>
+        </dialog>
 
         <!-- MODAL 3D FÍSICO -->
 
@@ -4140,7 +6389,7 @@
                 <span>📖 Álbum Virtual</span>
                 <span style="font-size:0.8rem; font-weight:400; color: var(--text-secondary);" id="modal3dTitle">Capa</span>
               </h2>
-              <button class="close-3d" id="close3D" type="button" aria-label="Fechar visualização 3D" title="Fechar"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+              <button class="close-3d" id="close3D" type="button" aria-label="Fechar álbum virtual" title="Fechar álbum virtual"><i class="fas fa-xmark" aria-hidden="true"></i><span>Fechar</span></button>
             </div>
             <div class="book-wrapper" id="bookWrapper">
               <div class="book-physical" id="bookPhysical"></div>
@@ -4157,7 +6406,7 @@
                   <span class="preview-info-icon" aria-hidden="true"><i class="fas fa-eye"></i></span>
                   <strong>Visualização do seu layout</strong>
                 </div>
-               <strong><p><em>Esta é uma prévia de como a montagem do seu álbum ficará e não o álbum finalizado.</em></p></strong>
+               <strong><p><em>Na prévia algumas fotos podem aparecer cortadas, aproximadas ou fora do enquadramento ideal. Serão ajustadas na montagem. Mas atenção na escolha da modura ideal para a intenção.</em></p></strong>
               </div>
               <div class="client-note-field">
                 <label for="clientOrientacoesInput"><i class="fas fa-comment-dots" aria-hidden="true"></i> Deixe uma orientação ou recado para a montagem final</label>
@@ -4201,12 +6450,19 @@
             </div>
             <div id="modalMatches"></div>
             <div id="modalIaInfo"></div>
-            <label for="modalSelectPagina" style="font-weight:500; display:block; margin-top:0.8rem;">Página:</label>
-            <select id="modalSelectPagina"></select>
+            <div class="modal-page-controls" id="modalPageControls">
+              <label for="modalSelectPagina" style="font-weight:500; display:block; margin-top:0.8rem;">Página:</label>
+              <select id="modalSelectPagina"></select>
+            </div>
             <div class="modal-actions">
-              <button class="btn btn-danger btn-sm" id="modalBtnRemover" type="button"><i class="fas fa-trash-can" aria-hidden="true"></i> Retirar da página</button>
-              <button class="btn btn-primary btn-sm" id="modalBtnAtribuir"><i class="fas fa-square-check" aria-hidden="true"></i> Atribuir</button>
-              <button class="btn btn-sm" style="background:var(--border-color);" id="modalBtnCancelar"><i class="fas fa-xmark" aria-hidden="true"></i> Cancelar</button>
+              <button class="btn btn-gold btn-sm modal-favorite-action" id="modalBtnFavorita" type="button" aria-pressed="false" title="Marcar esta foto como favorita">
+                <i class="far fa-star" aria-hidden="true"></i> <span>Favorita</span>
+              </button>
+              <div class="modal-page-actions" id="modalPageActions">
+                <button class="btn btn-danger btn-sm" id="modalBtnRemover" type="button"><i class="fas fa-trash-can" aria-hidden="true"></i> Retirar da página</button>
+                <button class="btn btn-primary btn-sm" id="modalBtnAtribuir" type="button"><i class="fas fa-square-check" aria-hidden="true"></i> Atribuir</button>
+              </div>
+              <button class="btn btn-sm" style="background:var(--border-color);" id="modalBtnCancelar" type="button"><i class="fas fa-xmark" aria-hidden="true"></i> Cancelar</button>
             </div>
           </div>
         </div>
@@ -4550,9 +6806,11 @@
             const clienteNome = ${JSON.stringify(cliente)};
             const aniversarianteNome = ${JSON.stringify(aniversariante)};
             const dataEnvioStr = ${JSON.stringify(dataEnvio)};
+            const THEME_FUNDOS_DATA = ${JSON.stringify(temaClienteData)};
 
             const DEFAULT_BG = '#f0ede8';
             const pageBgColors = {};
+            const pageBgImages = {};
             for (let i = 1; i <= 23; i++) pageBgColors[i] = DEFAULT_BG;
             pageBgColors['capa'] = DEFAULT_BG;
 
@@ -4735,7 +6993,7 @@
             // ============================================================
             // GERADOR DE IMAGEM DA PÁGINA (usa POSITION_LAYOUTS)
             // ============================================================
-            function generatePageImage(photos, isCapa, pageNum, bgColor, layoutId) {
+            function generatePageImage(photos, isCapa, pageNum, bgColor, layoutId, bgImageUrl) {
               return new Promise((resolve) => {
                 const w = isCapa ? 340 : 276;
                 const h = isCapa ? 250 : 200;
@@ -4748,6 +7006,38 @@
                 ctx.fillStyle = bgColor || DEFAULT_BG;
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+                if (bgImageUrl) {
+                  const bgImg = new Image();
+                  bgImg.onload = () => {
+                    try {
+                      const imgAspect = bgImg.width / Math.max(1, bgImg.height);
+                      const canvasAspect = canvas.width / Math.max(1, canvas.height);
+                      let drawW, drawH, dx, dy;
+                      if (imgAspect > canvasAspect) {
+                        drawH = canvas.height;
+                        drawW = drawH * imgAspect;
+                        dx = (canvas.width - drawW) / 2;
+                        dy = 0;
+                      } else {
+                        drawW = canvas.width;
+                        drawH = drawW / imgAspect;
+                        dx = 0;
+                        dy = (canvas.height - drawH) / 2;
+                      }
+                      ctx.save();
+                      ctx.globalAlpha = 1;
+                      ctx.drawImage(bgImg, dx, dy, drawW, drawH);
+                      ctx.restore();
+                    } catch (_) {}
+                    continuarGeracaoPagina();
+                  };
+                  bgImg.onerror = () => continuarGeracaoPagina();
+                  bgImg.src = bgImageUrl;
+                } else {
+                  continuarGeracaoPagina();
+                }
+
+                function continuarGeracaoPagina() {
                 if (isCapa) {
                   if (photos.length > 0 && photos[0].thumb) {
                     const img = new Image();
@@ -4767,6 +7057,11 @@
                         dy = (canvas.height - drawH) / 2;
                       }
                       ctx.drawImage(img, dx, dy, drawW, drawH);
+                      ctx.save();
+                      ctx.strokeStyle = '#ffffff';
+                      ctx.lineWidth = Math.max(1, Math.round(scale * 2));
+                      ctx.strokeRect(dx, dy, drawW, drawH);
+                      ctx.restore();
                       resolve(canvas.toDataURL('image/jpeg', 0.92));
                     };
                     img.onerror = () => resolve(canvas.toDataURL('image/jpeg', 0.92));
@@ -4857,11 +7152,19 @@
                       ctx.drawImage(img, crop.sx, crop.sy, crop.sw, crop.sh, px, py, pw, ph);
                       ctx.restore();
                     }
+
+                    // Borda branca uniforme em todas as fotos do álbum virtual.
+                    ctx.save();
+                    ctx.strokeStyle = '#ffffff';
+                    ctx.lineWidth = Math.max(1, Math.round(scale * 2));
+                    ctx.strokeRect(px, py, pw, ph);
+                    ctx.restore();
                   });
                   resolve(canvas.toDataURL('image/jpeg', 0.92));
                 }).catch(() => {
                   resolve(canvas.toDataURL('image/jpeg', 0.92));
                 });
+                }
               });
             }
 
@@ -5105,6 +7408,9 @@
             let currentFilter = 'all';
             let galeriaRecolhida = false;
             let acessoAtual = 'manual';
+            // No modo Sugerida, a edição manual só é liberada depois que uma
+            // proposta realmente foi aplicada ao álbum.
+            let montagemSugeridaConcluida = false;
             let curadoriaFlowMode = 'sugerida';
             let clientePreferences = {
               peopleRoles: {},
@@ -5127,28 +7433,57 @@
             let corAtualPagina = 'capa';
             let clientOrientacoes = '';
             let clientOrientacoesSaveTimer = null;
+            let estadoSaveTimer = null;
+            let estadoSaveRunning = false;
+            let estadoSavePending = false;
 
             // ============================================================
             // FUNÇÕES DE PERSISTÊNCIA — IMPLEMENTAÇÃO COMPLETA
             // ============================================================
-            function salvarEstado() {
-                try {
-                    const estado = {
-                        fotoPaginaMap: {},
-                        paginasLayout: paginas.map(p => ({ id: p.id, layoutId: p.layoutId })),
-                        pageBgColors: pageBgColors,
-                        nextPaginaNum: nextPaginaNum,
-                        selectedPhotoIds: Array.from(selectedIds),
-                        clientePreferences: clientePreferences,
-                        clientOrientacoes: clientOrientacoes
-                    };
-                    fotos.forEach(f => {
-                        if (f.pagina) estado.fotoPaginaMap[f.id] = f.pagina;
-                    });
-                    localforage.setItem(STORAGE_KEY, estado).catch(err => console.error('Erro ao salvar estado:', err));
-                } catch (err) {
-                    console.error('Erro ao serializar estado:', err);
+            function construirEstadoPersistencia() {
+              const estado = {
+                fotoPaginaMap: {},
+                paginasLayout: paginas.map(p => ({ id: p.id, layoutId: p.layoutId })),
+                pageBgColors: pageBgColors,
+                pageBgImages: pageBgImages,
+                nextPaginaNum: nextPaginaNum,
+                selectedPhotoIds: Array.from(selectedIds),
+                montagemSugeridaConcluida: montagemSugeridaConcluida,
+                clientePreferences: clientePreferences,
+                clientOrientacoes: clientOrientacoes
+              };
+              fotos.forEach(f => {
+                if (f.pagina) estado.fotoPaginaMap[f.id] = f.pagina;
+              });
+              return estado;
+            }
+
+            async function salvarEstadoAgora() {
+              if (estadoSaveRunning) {
+                estadoSavePending = true;
+                return;
+              }
+              estadoSaveRunning = true;
+              try {
+                const estado = construirEstadoPersistencia();
+                await localforage.setItem(STORAGE_KEY, estado);
+              } catch (err) {
+                console.error('Erro ao salvar estado:', err);
+              } finally {
+                estadoSaveRunning = false;
+                if (estadoSavePending) {
+                  estadoSavePending = false;
+                  salvarEstado();
                 }
+              }
+            }
+
+            function salvarEstado() {
+              window.clearTimeout(estadoSaveTimer);
+              estadoSaveTimer = window.setTimeout(() => {
+                // Deixa a interação terminar antes da serialização/gravação.
+                salvarEstadoAgora();
+              }, 180);
             }
 
             async function carregarEstado() {
@@ -5173,9 +7508,19 @@
                             pageBgColors[key] = estado.pageBgColors[key];
                         }
                     }
+                    if (estado.pageBgImages) {
+                        for (const key in estado.pageBgImages) {
+                            if (typeof estado.pageBgImages[key] === 'string' && estado.pageBgImages[key].startsWith('data:image/')) {
+                                pageBgImages[key] = estado.pageBgImages[key];
+                            }
+                        }
+                    }
 
                     // Restaurar próximo número
                     if (estado.nextPaginaNum) nextPaginaNum = estado.nextPaginaNum;
+
+                    // Restaurar estado do fluxo de Montagem Sugerida
+                    montagemSugeridaConcluida = estado.montagemSugeridaConcluida === true;
 
                     // Restaurar seleção de fotos
                     if (estado.selectedPhotoIds) {
@@ -5209,17 +7554,18 @@
             // ============================================================
             // FUNÇÃO CENTRAL DE ATRIBUIÇÃO (CORRIGIDA)
             // ============================================================
-            function atribuirFotoAPagina(fotoId, paginaId) {
+            function atribuirFotoAPagina(fotoId, paginaId, options) {
                 const foto = fotos.find(f => f.id === fotoId);
                 if (!foto) {
                     return { success: false, message: 'Foto não encontrada.' };
                 }
 
                 const paginaAnterior = foto.pagina;
+                const persistir = !options || options.persist !== false;
 
                 if (paginaId === null || paginaId === undefined || paginaId === '') {
                     foto.pagina = null;
-                    salvarEstado();
+                    if (persistir) salvarEstado();
                     return { success: true, paginaAnterior, paginaAtual: null };
                 }
 
@@ -5239,17 +7585,36 @@
                 }
 
                 foto.pagina = paginaId;
-                salvarEstado();
+                if (persistir) salvarEstado();
                 return { success: true, paginaAnterior, paginaAtual: paginaId };
             }
 
             // ============================================================
             // FUNÇÃO DE ATUALIZAÇÃO DA INTERFACE (CORRIGIDA)
             // ============================================================
-            function atualizarInterfaceAposAtribuicao() {
-                render();
+            function atualizarInterfaceAposAtribuicao(fotoId) {
+                // Atualização cirúrgica: não reconstrói toda a galeria ao atribuir uma foto.
+                let card = null;
+                const wantedPhotoId = String(fotoId || '');
+                document.querySelectorAll('#thumbsGrid .thumb-item[data-photo-id]').forEach(function(el){
+                  if (!card && String(el.dataset.photoId) === wantedPhotoId) card = el;
+                });
+                const foto = fotos.find(f => f.id === fotoId);
+                if (card && foto) {
+                  const badge = card.querySelector('.page-badge');
+                  if (badge) {
+                    badge.textContent = foto.pagina === 'capa'
+                      ? 'Capa'
+                      : foto.pagina
+                        ? (getPaginaById(foto.pagina) ? 'P' + getPaginaById(foto.pagina).numero : '?')
+                        : '—';
+                    badge.classList.toggle('capa', foto.pagina === 'capa');
+                  }
+                }
+                renderAlbum();
+                if (window.__mobileSelectionPerfRefresh) window.__mobileSelectionPerfRefresh();
                 if (document.getElementById('modal3D') && document.getElementById('modal3D').classList.contains('open')) {
-                    buildAlbum().then(() => render3D());
+                    buildAlbum().then(() => render3D()).catch(() => {});
                 }
             }
 
@@ -5259,6 +7624,25 @@
             const modalLayoutSelector = document.getElementById('modalLayoutSelector');
             const layoutGrid = document.getElementById('layoutGrid');
             let layoutSelectorCallback = null;
+
+            // ============================================================
+            // SELETOR DE FUNDOS POR PÁGINA — ESTADO DO MODAL
+            // Mantido dentro do HTML do cliente para evitar referências
+            // a variáveis que existiam somente no gerador.
+            // ============================================================
+            const pageBgDialog = document.getElementById('pageBgDialog');
+            const pageBgClose = document.getElementById('pageBgClose');
+            const pageBgCancel = document.getElementById('pageBgCancel');
+            const pageBgClear = document.getElementById('pageBgClear');
+            const pageBgApply = document.getElementById('pageBgApply');
+            const pageBgGrid = document.getElementById('pageBgGrid');
+            const pageBgPageLabel = document.getElementById('pageBgPageLabel');
+            const pageBgSelectedLabel = document.getElementById('pageBgSelectedLabel');
+            const pageBgThemeLabel = document.getElementById('pageBgThemeLabel');
+            let pageBgPaginaAtual = null;
+            let pageBgPending = null;
+            let pageBgDirty = false;
+            let pageBgOpenedFrom = null;
 
             function abrirModalLayout(callback) {
               layoutSelectorCallback = callback;
@@ -5346,14 +7730,204 @@
             });
 
             // ============================================================
+            // SELETOR DE FUNDOS POR PÁGINA
+            // ============================================================
+            function getPageBgKey(pagina) {
+              if (!pagina) return null;
+              return pagina.numero === 0 || pagina.id === 'capa' ? 'capa' : String(pagina.numero);
+            }
+
+            function atualizarPageBgSelectedUI() {
+              if (!pageBgSelectedLabel) return;
+              if (pageBgPending) {
+                const item = (THEME_FUNDOS_DATA && Array.isArray(THEME_FUNDOS_DATA.items))
+                  ? THEME_FUNDOS_DATA.items.find(x => x.dataUrl === pageBgPending)
+                  : null;
+                pageBgSelectedLabel.innerHTML = '<i class="fas fa-circle-check" aria-hidden="true"></i> ' +
+                  (item ? item.name.replace(/\\.[^.]+$/, '') : 'Fundo selecionado');
+              } else {
+                pageBgSelectedLabel.innerHTML = '<i class="fas fa-circle-info" aria-hidden="true"></i> Nenhum fundo selecionado';
+              }
+              if (pageBgApply) {
+                pageBgApply.disabled = !pageBgDirty || (!THEME_FUNDOS_DATA && !!pageBgPending);
+              }
+            }
+
+            function renderPageBgGrid() {
+              if (!pageBgGrid) return;
+              pageBgGrid.innerHTML = '';
+
+              if (!THEME_FUNDOS_DATA || !Array.isArray(THEME_FUNDOS_DATA.items) || !THEME_FUNDOS_DATA.items.length) {
+                const empty = document.createElement('div');
+                empty.className = 'theme-bg-empty';
+                empty.innerHTML = '<div><i class="fas fa-palette" style="font-size:2rem;color:#d4af37;"></i>' +
+                  '<p style="margin-top:10px;font-weight:700;color:#fff;">Nenhum tema foi enviado para esta seleção.</p>' +
+                  '<p style="margin-top:5px;">O criador precisa escolher um tema na biblioteca de fundos antes de gerar o HTML.</p></div>';
+                pageBgGrid.appendChild(empty);
+                if (pageBgApply) pageBgApply.disabled = true;
+                return;
+              }
+
+              const frag = document.createDocumentFragment();
+              THEME_FUNDOS_DATA.items.forEach((item) => {
+                const card = document.createElement('article');
+                card.className = 'theme-bg-card' + (pageBgPending === item.dataUrl ? ' selected' : '');
+                card.tabIndex = 0;
+                card.setAttribute('role', 'button');
+                card.setAttribute('aria-pressed', String(pageBgPending === item.dataUrl));
+                card.title = item.name + ' · ' + item.theme;
+
+                const thumb = document.createElement('div');
+                thumb.className = 'theme-bg-thumb';
+
+                const img = document.createElement('img');
+                img.src = item.dataUrl;
+                img.alt = item.name;
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                thumb.appendChild(img);
+
+                const check = document.createElement('div');
+                check.className = 'theme-bg-check';
+                check.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i>';
+                thumb.appendChild(check);
+
+                const meta = document.createElement('div');
+                meta.className = 'theme-bg-meta';
+
+                const name = document.createElement('div');
+                name.className = 'theme-bg-name';
+                name.textContent = item.name.replace(/\\.[^.]+$/, '');
+
+                const theme = document.createElement('div');
+                theme.className = 'theme-bg-theme';
+                theme.textContent = item.theme || THEME_FUNDOS_DATA.themeName || 'Tema';
+
+                meta.appendChild(name);
+                meta.appendChild(theme);
+                card.appendChild(thumb);
+                card.appendChild(meta);
+
+                const selecionar = () => {
+                  pageBgPending = item.dataUrl;
+                  pageBgDirty = true;
+                  renderPageBgGrid();
+                  atualizarPageBgSelectedUI();
+                };
+                card.addEventListener('click', selecionar);
+                card.addEventListener('keydown', (e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    selecionar();
+                  }
+                });
+
+                frag.appendChild(card);
+              });
+
+              pageBgGrid.appendChild(frag);
+              atualizarPageBgSelectedUI();
+            }
+
+            function abrirModalFundoPagina(pagina) {
+              if (!pageBgDialog || !pagina) return;
+              pageBgOpenedFrom = document.activeElement;
+              pageBgPaginaAtual = pagina;
+
+              const key = getPageBgKey(pagina);
+              pageBgPending = pageBgImages[key] || null;
+              pageBgDirty = false;
+
+              pageBgPageLabel.innerHTML = '<i class="fas fa-file-lines" aria-hidden="true"></i> ' + getPaginaLabel(pagina);
+              pageBgThemeLabel.textContent = THEME_FUNDOS_DATA
+                ? 'Tema enviado pelo criador: ' + (THEME_FUNDOS_DATA.themeName || 'Tema')
+                : 'Nenhum tema enviado pelo criador';
+
+              renderPageBgGrid();
+              if (pageBgDialog && typeof pageBgDialog.showModal === 'function' && !pageBgDialog.open) {
+                pageBgDialog.showModal();
+              }
+              if (pageBgGrid && typeof pageBgGrid.focus === 'function') {
+                setTimeout(() => pageBgGrid.focus({ preventScroll: true }), 0);
+              }
+            }
+
+            function fecharModalFundoPagina() {
+              if (pageBgDialog && pageBgDialog.open && typeof pageBgDialog.close === 'function') {
+                pageBgDialog.close();
+              }
+            }
+
+            function aplicarFundoPagina() {
+              if (!pageBgPaginaAtual) return;
+
+              const key = getPageBgKey(pageBgPaginaAtual);
+              if (pageBgPending) {
+                pageBgImages[key] = pageBgPending;
+              } else {
+                delete pageBgImages[key];
+              }
+
+              const nome = pageBgPending
+                ? 'Fundo aplicado à ' + getPaginaLabel(pageBgPaginaAtual) + '.'
+                : 'Fundo removido da ' + getPaginaLabel(pageBgPaginaAtual) + '.';
+
+              salvarEstado();
+              renderAlbum();
+
+              // Confirmação concluída: fechar imediatamente o modal.
+              fecharModalFundoPagina();
+              showToast('🎨 ' + nome);
+
+              // Atualização visual do 3D em segundo plano.
+              const modal3d = document.getElementById('modal3D');
+              if (modal3d && modal3d.classList.contains('open')) {
+                buildAlbum().then(() => render3D()).catch(() => {});
+              }
+            }
+
+            function limparFundoPagina() {
+              pageBgPending = null;
+              pageBgDirty = true;
+              atualizarPageBgSelectedUI();
+              renderPageBgGrid();
+            }
+
+            if (pageBgApply) pageBgApply.addEventListener('click', aplicarFundoPagina);
+            if (pageBgClear) pageBgClear.addEventListener('click', limparFundoPagina);
+            if (pageBgCancel) pageBgCancel.addEventListener('click', fecharModalFundoPagina);
+            if (pageBgClose) pageBgClose.addEventListener('click', fecharModalFundoPagina);
+            if (pageBgDialog) {
+              pageBgDialog.addEventListener('close', () => {
+                if (pageBgOpenedFrom && document.contains(pageBgOpenedFrom)) {
+                  setTimeout(() => pageBgOpenedFrom.focus(), 0);
+                }
+                pageBgOpenedFrom = null;
+                pageBgPaginaAtual = null;
+                pageBgPending = null;
+                pageBgDirty = false;
+              });
+              pageBgDialog.addEventListener('cancel', () => {
+                pageBgOpenedFrom = document.activeElement;
+              });
+            }
+
+            // ============================================================
             // FUNÇÃO RENDER ALBUM ATUALIZADA COM SELETOR VISUAL
             // ============================================================
             function renderAlbum() {
               const album = document.getElementById('albumPreview');
               album.innerHTML = '';
+              const fotosPorPagina = new Map();
+              fotos.forEach(f => {
+                if (!f.pagina) return;
+                if (!fotosPorPagina.has(f.pagina)) fotosPorPagina.set(f.pagina, []);
+                fotosPorPagina.get(f.pagina).push(f);
+              });
               const sorted = [...paginas].sort((a, b) => a.numero - b.numero);
+              const fragment = document.createDocumentFragment();
               sorted.forEach(pag => {
-                const fotosNaPag = getFotosNaPagina(pag.id);
+                const fotosNaPag = fotosPorPagina.get(pag.id) || [];
                 if (fotosNaPag.length === 0 && pag.numero !== 0) return;
 
                 const div = document.createElement('div');
@@ -5434,6 +8008,35 @@
                   titulo.appendChild(layoutBtn);
                 }
 
+                const pageBgKey = getPageBgKey(pag);
+                const pageBgBtn = document.createElement('button');
+                const temFundo = !!pageBgImages[pageBgKey];
+                pageBgBtn.className = 'page-bg-btn' + (temFundo ? ' has-bg' : '');
+                pageBgBtn.type = 'button';
+                pageBgBtn.title = temFundo ? 'Alterar fundo da página' : 'Escolher fundo da página';
+
+                const bgPreview = document.createElement('span');
+                bgPreview.className = 'page-bg-preview';
+                if (temFundo) bgPreview.style.backgroundImage = 'url("' + pageBgImages[pageBgKey] + '")';
+                pageBgBtn.appendChild(bgPreview);
+
+                const bgLabel = document.createElement('span');
+                bgLabel.textContent = temFundo ? 'Fundo selecionado' : 'Escolher fundo';
+                pageBgBtn.appendChild(bgLabel);
+                pageBgBtn.addEventListener('click', (e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  abrirModalFundoPagina(pag);
+                });
+                titulo.appendChild(pageBgBtn);
+
+                const bgStatus = document.createElement('span');
+                bgStatus.className = 'page-bg-status';
+                bgStatus.innerHTML = temFundo
+                  ? '<i class="fas fa-circle-check" aria-hidden="true"></i> personalizado'
+                  : '<i class="fas fa-circle-minus" aria-hidden="true"></i> sem fundo';
+                titulo.appendChild(bgStatus);
+
                 const slots = document.createElement('div');
                 slots.className = 'slots';
 
@@ -5455,8 +8058,10 @@
 
                 div.appendChild(titulo);
                 div.appendChild(slots);
-                album.appendChild(div);
+                fragment.appendChild(div);
               });
+              album.appendChild(fragment);
+              if (window.__mobileSelectionPerfRefresh) window.__mobileSelectionPerfRefresh();
             }
 
             // ============================================================
@@ -5464,15 +8069,17 @@
             // ============================================================
             function atribuirPagina() {
               if (!modalFotoAtual) return;
-              const paginaId = document.getElementById('modalSelectPagina').value;
+              const select = document.getElementById('modalSelectPagina');
+              const paginaId = select ? select.value : '';
               const fotoId = modalFotoAtual.id;
-              const result = atribuirFotoAPagina(fotoId, paginaId);
+              const result = atribuirFotoAPagina(fotoId, paginaId, { persist:false });
               if (!result.success) {
                 showToast('⚠️ ' + result.message);
                 return;
               }
               fecharModal();
-              atualizarInterfaceAposAtribuicao();
+              atualizarInterfaceAposAtribuicao(fotoId);
+              salvarEstado();
               if (paginaId === '' || paginaId === null) {
                 showToast('Foto removida da página.');
               } else {
@@ -5487,9 +8094,10 @@
             function removerDaPagina(fotoId) {
               const f = fotos.find(f => f.id === fotoId);
               if (f) {
-                const result = atribuirFotoAPagina(f.id, null);
+                const result = atribuirFotoAPagina(f.id, null, { persist:false });
                 if (result.success) {
-                  atualizarInterfaceAposAtribuicao();
+                  atualizarInterfaceAposAtribuicao(f.id);
+                  salvarEstado();
                   showToast('Foto removida.');
                 } else {
                   showToast('⚠️ ' + result.message);
@@ -5513,9 +8121,11 @@
             // ============================================================
             function resetarSelecao() {
               if (!confirm('Resetar todas as atribuições?')) return;
+              montagemSugeridaConcluida = false;
               fotos.forEach(f => f.pagina = null);
               paginas = [{ id: 'capa', numero: 0, layoutId: null }];
               for (let i=1; i<=23; i++) paginas.push({ id: 'p_'+i, numero: i, layoutId: '4' });
+              Object.keys(pageBgImages).forEach(k => delete pageBgImages[k]);
               nextPaginaNum = 24;
               salvarEstado();
               atualizarInterfaceAposAtribuicao();
@@ -5526,8 +8136,43 @@
             // FUNÇÕES DO MODAL DE DETALHES (preservadas)
             // ============================================================
             let modalFotoAtual = null;
+
+            function isModoMontagemSugerida() {
+              return acessoAtual === 'sugerida' || document.body.classList.contains('mode-suggested');
+            }
+
+            function atualizarModalFavoritaUI(foto) {
+              const btn = document.getElementById('modalBtnFavorita');
+              if (!btn) return;
+              const selecionada = !!(foto && selectedIds.has(foto.id));
+              btn.setAttribute('aria-pressed', String(selecionada));
+              btn.classList.toggle('ativo', selecionada);
+              btn.innerHTML = selecionada
+                ? '<i class="fas fa-star" aria-hidden="true"></i> <span>Favorita</span>'
+                : '<i class="far fa-star" aria-hidden="true"></i> <span>Favorita</span>';
+              btn.title = selecionada ? 'Desmarcar esta foto como favorita' : 'Marcar esta foto como favorita';
+            }
+
+            function configurarModalPorModo() {
+              const suggested = isModoMontagemSugerida();
+              const suggestedEditable = suggested && montagemSugeridaConcluida;
+              const pageControls = document.getElementById('modalPageControls');
+              const pageActions = document.getElementById('modalPageActions');
+              const favoriteBtn = document.getElementById('modalBtnFavorita');
+              const assignBtn = document.getElementById('modalBtnAtribuir');
+              const removeBtn = document.getElementById('modalBtnRemover');
+
+              if (pageControls) pageControls.hidden = suggested && !suggestedEditable;
+              if (pageActions) pageActions.hidden = suggested && !suggestedEditable;
+              if (favoriteBtn) favoriteBtn.hidden = !suggested;
+              if (assignBtn) assignBtn.disabled = suggested && !suggestedEditable;
+              if (removeBtn) removeBtn.disabled = suggested && !suggestedEditable;
+            }
+
             function abrirModal(foto) {
               modalFotoAtual = foto;
+              configurarModalPorModo();
+              atualizarModalFavoritaUI(foto);
               document.getElementById('modalFotoPreview').src = foto.thumb;
               document.getElementById('modalFotoNome').textContent = foto.nome;
 
@@ -5555,7 +8200,7 @@
                 if (foto.relevance) html += \`<div class="ia-row"><span>Relevância</span><span>\${Math.round(foto.relevance*100)}%</span></div>\`;
                 if (foto.familyScore) html += \`<div class="ia-row"><span>Família</span><span>\${Math.round(foto.familyScore*100)}%</span></div>\`;
                 if (foto.decorationScore) html += \`<div class="ia-row"><span>Decoração</span><span>\${Math.round(foto.decorationScore*100)}%</span></div>\`;
-                if (foto.qualityScore) html += \`<div class="ia-row"><span>Qualidade</span><span>\${Math.round(foto.qualityScore*100)}%</span></div>\`;
+
                 if (foto.moment) html += \`<div class="ia-row"><span>Momento</span><span>\${foto.moment}</span></div>\`;
                 if (foto.storyScore) html += \`<div class="ia-row"><span>Narrativa</span><span>\${Math.round(foto.storyScore*100)}%</span></div>\`;
                 html += '</div>';
@@ -5564,6 +8209,11 @@
 
               const select = document.getElementById('modalSelectPagina');
               select.innerHTML = '';
+              if (isModoMontagemSugerida()) {
+                document.getElementById('modalOverlay').classList.add('active');
+                atualizarModalFavoritaUI(foto);
+                return;
+              }
               const optNone = document.createElement('option');
               optNone.value = '';
               optNone.textContent = '— Sem página —';
@@ -5823,6 +8473,8 @@
             // APLICAR MONTAGEM (CORRIGIDA)
             // ============================================================
             function aplicarMontagem(montagem) {
+              // A partir daqui o cliente entra no modo de revisão/edição.
+              montagemSugeridaConcluida = true;
               fotos.forEach(f => f.pagina = null);
               paginas = [{ id: 'capa', numero: 0, layoutId: null }];
               if (montagem.capa) {
@@ -5847,6 +8499,7 @@
               });
               nextPaginaNum = nextNum;
               salvarEstado();
+              atualizarAcessoVisual('sugerida');
               atualizarInterfaceAposAtribuicao();
               showToast('✅ Montagem "' + montagem.label + '" aplicada com ' + montagem.totalFotos + ' fotos.');
             }
@@ -6413,7 +9066,8 @@
                   paginas:paginas.map(p=>({...p})),
                   paginaFotos:new Map(fotos.map(f=>[f.id,f.pagina||null])),
                   nextPaginaNum,
-                  pageBgColors:{...pageBgColors}
+                  pageBgColors:{...pageBgColors},
+                  pageBgImages:{...pageBgImages}
                 };
               }
 
@@ -6425,6 +9079,8 @@
                 nextPaginaNum=snapshot.nextPaginaNum;
                 Object.keys(pageBgColors).forEach(k=>delete pageBgColors[k]);
                 Object.assign(pageBgColors,snapshot.pageBgColors);
+                Object.keys(pageBgImages).forEach(k=>delete pageBgImages[k]);
+                Object.assign(pageBgImages,snapshot.pageBgImages || {});
                 currentFilter=snapshot.filter;
                 atualizarAcessoVisual(snapshot.mode || 'manual');
                 document.querySelectorAll('#filterBar .filter-chip').forEach(x=>x.classList.toggle('active',x.dataset.filter===currentFilter));
@@ -6512,11 +9168,35 @@
               atualizarOrientacoesClienteUI();
             }
 
-            document.getElementById('modalBtnAtribuir').addEventListener('click', atribuirPagina);
+            document.getElementById('modalBtnAtribuir').addEventListener('click', (event) => {
+              if (isModoMontagemSugerida()) {
+                event.preventDefault();
+                event.stopPropagation();
+                return;
+              }
+              atribuirPagina(event);
+            });
+
+            const modalBtnFavorita = document.getElementById('modalBtnFavorita');
+            if (modalBtnFavorita) {
+              modalBtnFavorita.addEventListener('click', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                if (!isModoMontagemSugerida() || !modalFotoAtual) return;
+                toggleSelecao(modalFotoAtual.id);
+                atualizarModalFavoritaUI(modalFotoAtual);
+              });
+            }
+
             const modalBtnRemover = document.getElementById('modalBtnRemover');
             if (modalBtnRemover) {
               modalBtnRemover.title = 'Retirar esta foto da página atual sem apagar a foto da galeria';
-              modalBtnRemover.addEventListener('click', () => {
+              modalBtnRemover.addEventListener('click', (event) => {
+                if (isModoMontagemSugerida()) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  return;
+                }
                 if (!modalFotoAtual) {
                   showToast('Selecione uma foto antes de remover da página.');
                   return;
@@ -6551,6 +9231,10 @@
               linhas.push('Cliente: ' + clienteNome);
               linhas.push('Aniversariante: ' + aniversarianteNome);
               linhas.push('Envio: ' + dataEnvioStr);
+              const temaFundosTxt = (THEME_FUNDOS_DATA && THEME_FUNDOS_DATA.themeName)
+                ? THEME_FUNDOS_DATA.themeName
+                : '(nenhum tema de fundos enviado pelo criador)';
+              linhas.push('Tema de fundos usado pelo criador: ' + temaFundosTxt);
               linhas.push('');
               linhas.push('ORIENTAÇÕES / RECADO DO CLIENTE:');
               if (clientOrientacoes && clientOrientacoes.trim()) {
@@ -6564,8 +9248,18 @@
               linhas.push('Volume: ' + clientePreferences.volume);
               linhas.push('Fotos selecionadas: ' + selectedIds.size);
               linhas.push('');
+              const obterNomeFundoTxt = (pagina) => {
+                const key = getPageBgKey(pagina);
+                const dataUrl = pageBgImages[key];
+                if (!dataUrl) return '(sem fundo)';
+                const item = (THEME_FUNDOS_DATA && Array.isArray(THEME_FUNDOS_DATA.items))
+                  ? THEME_FUNDOS_DATA.items.find(x => x.dataUrl === dataUrl)
+                  : null;
+                return item && item.name ? item.name : '(arquivo incorporado não identificado)';
+              };
               const capaFotos = fotos.filter(f => f.pagina === 'capa');
-              linhas.push('CAPA:');
+              const capaPagina = paginas.find(pg => pg.id === 'capa') || { id: 'capa', numero: 0, layoutId: null };
+              linhas.push('CAPA: (fundo: ' + obterNomeFundoTxt(capaPagina) + ')');
               if (capaFotos.length) capaFotos.forEach(f => linhas.push('  ' + f.nome));
               else linhas.push('  (vazio)');
               linhas.push('');
@@ -6575,7 +9269,7 @@
                 if (fs.length === 0) return;
                 const layoutId = p.layoutId || '4';
                 const layoutLabel = LAYOUTS[layoutId] ? LAYOUTS[layoutId].label : layoutId;
-                linhas.push('Página ' + p.numero + ' (layout: ' + layoutLabel + '):');
+                linhas.push('Página ' + p.numero + ' (layout: ' + layoutLabel + '; fundo: ' + obterNomeFundoTxt(p) + '):');
                 fs.forEach((f, idx) => linhas.push('  ' + (idx+1) + '. ' + f.nome));
                 linhas.push('');
               });
@@ -6650,9 +9344,21 @@
             function salvarPreferencias() { salvarEstado(); }
 
             function toggleSelecao(id) {
-              if (selectedIds.has(id)) selectedIds.delete(id); else selectedIds.add(id);
-              const f = fotos.find(x => x.id === id); if (f) f.selecionada = selectedIds.has(id);
-              renderThumbs(); atualizarResumoSelecao(); salvarPreferencias();
+              const novoEstado = !selectedIds.has(id);
+              if (novoEstado) selectedIds.add(id); else selectedIds.delete(id);
+              const f = fotos.find(x => x.id === id);
+              if (f) f.selecionada = novoEstado;
+
+              // Não recria a galeria inteira a cada toque.
+              const card = document.querySelector('#thumbsGrid .thumb-item[data-photo-id="' + CSS.escape(String(id)) + '"]');
+              if (card) {
+                card.classList.toggle('selected', novoEstado);
+                const mark = card.querySelector('.select-mark');
+                if (mark) mark.setAttribute('aria-checked', String(novoEstado));
+              }
+              atualizarResumoSelecao();
+              salvarPreferencias();
+              if (window.__mobileSelectionPerfRefresh) window.__mobileSelectionPerfRefresh();
             }
 
             function aplicarFiltroAtual(f) {
@@ -6998,11 +9704,18 @@
               const visible = fotos.filter(aplicarFiltroAtual);
               const visibleForRender = visible;
               empty.style.display = visible.length ? 'none' : 'block';
+              const fragment = document.createDocumentFragment();
               visibleForRender.forEach(f => {
                 const div = document.createElement('div');
                 div.className = 'thumb-item' + (selectedIds.has(f.id) ? ' selected' : '');
                 div.dataset.photoId = f.id;
-                const img = document.createElement('img'); img.src = f.thumb; img.alt = f.nome; img.loading='lazy';
+                const img = document.createElement('img');
+                img.src = f.thumb;
+                img.alt = f.nome;
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                img.width = 220;
+                img.height = 165;
                 const mark=document.createElement('span'); mark.className='select-mark'; mark.setAttribute('aria-hidden','true'); mark.textContent='⭐';
                 const detail=document.createElement('button'); detail.type='button'; detail.className='detail-action'; detail.title='Ver detalhes da foto'; detail.innerHTML='<i class="fas fa-info" aria-hidden="true"></i>'; detail.onclick=(e)=>{e.stopPropagation(); abrirModal(f);};
                 const assign=document.createElement('button'); assign.type='button'; assign.className='assign-page-action'; assign.title='Atribuir esta foto manualmente a uma página'; assign.setAttribute('aria-label','Atribuir esta foto manualmente a uma página'); assign.innerHTML='<i class="fas fa-layer-group" aria-hidden="true"></i><span>Página</span>'; assign.onclick=(e)=>{e.stopPropagation(); abrirModal(f);};
@@ -7012,9 +9725,11 @@
                 if(f.pagina==='capa'){badge.textContent='Capa'; badge.classList.add('capa');} else if(f.pagina){const pg=getPaginaById(f.pagina); badge.textContent=pg?'P'+pg.numero:'?';} else badge.textContent='—';
                 info.appendChild(name); info.appendChild(badge); div.append(mark,detail,assign,img,info);
                 div.addEventListener('click',()=>toggleSelecao(f.id));
-                grid.appendChild(div);
+                fragment.appendChild(div);
               });
+              grid.appendChild(fragment);
               atualizarResumoSelecao();
+              if (window.__mobileSelectionPerfRefresh) window.__mobileSelectionPerfRefresh();
             }
 
             // ============================================================
@@ -7064,7 +9779,7 @@
               const paginasInternas = paginas.filter(p => p.numero > 0).sort((a,b) => a.numero - b.numero);
 
               const images = [];
-              const capaImg = await generatePageImage(capaFotos, true, 0, pageBgColors['capa'] || DEFAULT_BG, null);
+              const capaImg = await generatePageImage(capaFotos, true, 0, pageBgColors['capa'] || DEFAULT_BG, null, pageBgImages['capa'] || null);
               images.push(capaImg);
 
               const blankImg = await generateBlankImage(340, 250, '#f0ede8');
@@ -7075,7 +9790,7 @@
                 const fotosNaPag = p ? fotos.filter(f => f.pagina === p.id) : [];
                 const bg = pageBgColors[i] || DEFAULT_BG;
                 const layoutId = p && p.layoutId ? p.layoutId : '4';
-                const img = await generatePageImage(fotosNaPag, false, i, bg, layoutId);
+                const img = await generatePageImage(fotosNaPag, false, i, bg, layoutId, pageBgImages[i] || null);
                 images.push(img);
               }
 
@@ -7285,9 +10000,12 @@
             // ============================================================
             function atualizarAcessoVisual(mode) {
               acessoAtual = mode;
-              document.body.classList.remove('mode-manual','mode-suggested');
+              document.body.classList.remove('mode-manual','mode-suggested','suggested-editable');
               if (mode === 'manual') document.body.classList.add('mode-manual');
-              if (mode === 'sugerida') document.body.classList.add('mode-suggested');
+              if (mode === 'sugerida') {
+                document.body.classList.add('mode-suggested');
+                if (montagemSugeridaConcluida) document.body.classList.add('suggested-editable');
+              }
 
               document.querySelectorAll('[data-access-mode]').forEach(function(tab){
                 const active = tab.dataset.accessMode === mode;
@@ -7300,8 +10018,15 @@
               if (mode === 'manual') {
                 if (hint) hint.textContent = 'Selecione uma foto, use “Página” e escolha o layout da página.';
               } else if (mode === 'sugerida') {
-                if (hint) hint.textContent = selectedIds.size ? selectedIds.size + ' foto' + (selectedIds.size === 1 ? '' : 's') + ' escolhida' + (selectedIds.size === 1 ? '' : 's') + '. Clique em Montagem sugerida.' : 'Escolha as fotos que você mais gostou do evento.';
+                if (hint) hint.textContent = montagemSugeridaConcluida
+                  ? 'Montagem sugerida aplicada. Agora você pode editar páginas, trocar layouts e incluir outras fotos.'
+                  : (selectedIds.size ? selectedIds.size + ' foto' + (selectedIds.size === 1 ? '' : 's') + ' escolhida' + (selectedIds.size === 1 ? '' : 's') + '. Clique em Montagem sugerida.' : 'Escolha as fotos que você mais gostou do evento.');
                 if (suggestionBtn) suggestionBtn.style.display = 'inline-flex';
+              }
+
+              if (typeof configurarModalPorModo === 'function') {
+                configurarModalPorModo();
+                if (modalFotoAtual) atualizarModalFavoritaUI(modalFotoAtual);
               }
             }
 
@@ -7351,11 +10076,18 @@
               if (eventPill && eventPillName && (!aniversarianteNome || aniversarianteNome.trim().toLowerCase() === 'digite aqui')) eventPill.style.display='none';
 
               configurarProcessoAcesso();
-              render();
-              document.getElementById('clienteDisplay').textContent = clienteNome;
-              document.getElementById('aniversarianteDisplay').textContent = aniversarianteNome;
-              document.getElementById('dataEnvioDisplay').textContent = dataEnvioStr;
-              document.getElementById('refCountDisplay').textContent = refsData.length;
+
+              // Alguns campos informativos podem não existir em versões
+              // diferentes do layout do HTML do cliente. Nunca interromper
+              // a inicialização por causa de um elemento opcional ausente.
+              const definirTextoSeguro = (id, valor) => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = valor == null ? '' : String(valor);
+              };
+              definirTextoSeguro('clienteDisplay', clienteNome);
+              definirTextoSeguro('aniversarianteDisplay', aniversarianteNome);
+              definirTextoSeguro('dataEnvioDisplay', dataEnvioStr);
+              definirTextoSeguro('refCountDisplay', refsData.length);
 
               analisarFotos();
               render(); // re-render para garantir consistência
@@ -7367,12 +10099,347 @@
                 showToast('💾 Estado restaurado automaticamente.');
               }
 
-              await buildAlbum();
+              // O Álbum Virtual 3D é gerado somente quando o cliente
+              // abre "Visualizar montagem", mantendo a seleção leve.
             })();
 
           })();
         <\/script>
-        </body>
+        
+<script>
+(function(){
+  'use strict';
+
+  function moveMobileSheetsToBody(){
+    var ids = [
+      'modalCapturaRef',
+      'modalLayoutSelector',
+      'modalVersionHistory',
+      'modalOverlay',
+      'modalAgenteOverlay',
+      'tutorialOverlay',
+      'modal3D',
+      'pageBgDialog'
+    ];
+    ids.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && el.parentElement !== document.body){
+        document.body.appendChild(el);
+      }
+    });
+  }
+
+  function syncModalBodyLock(){
+    var any = !!document.querySelector(
+      '.modal-overlay.active, .modal-3d-overlay.open, dialog[open]'
+    );
+    document.body.classList.toggle('selection-modal-open', any);
+  }
+
+  function wireModalBodyLock(){
+    var observer = new MutationObserver(syncModalBodyLock);
+    observer.observe(document.body, {
+      subtree:true,
+      attributes:true,
+      attributeFilter:['class','open']
+    });
+    syncModalBodyLock();
+  }
+
+  function updateWorkspaceCount(){
+    var el = document.getElementById('workspacePhotosCount');
+    if(!el) return;
+    var count = document.querySelectorAll('#thumbsGrid .thumb-item').length;
+    var selected = document.getElementById('selectionCount');
+    var selectedText = selected ? String(selected.textContent || '').trim() : '';
+    el.textContent = count + ' fotos' + (selectedText ? ' · ' + selectedText + ' escolhidas' : '');
+  }
+
+  function updateLayoutButtonLabels(root){
+    root = root || document;
+    root.querySelectorAll('.layout-visual-btn').forEach(function(btn){
+      var mini = btn.querySelector('.thumb-mini');
+      if(!mini) return;
+      var count = mini.querySelectorAll('.slot').length;
+      var label = btn.querySelector('.mobile-layout-count');
+      if(!label){
+        label = document.createElement('span');
+        label.className = 'mobile-layout-count';
+        btn.appendChild(label);
+      }
+      label.textContent = count ? count + ' fotos' : 'Escolher layout';
+      btn.setAttribute(
+        'aria-label',
+        count
+          ? 'Alterar layout da página. Este layout comporta ' + count + ' fotos.'
+          : 'Escolher o layout da página.'
+      );
+    });
+
+    root.querySelectorAll('#layoutGrid .layout-btn').forEach(function(btn){
+      var slots = btn.querySelectorAll('.thumb-container .slot').length;
+      var label = btn.querySelector('.mobile-layout-count');
+      if(!label){
+        label = document.createElement('span');
+        label.className = 'mobile-layout-count';
+        btn.appendChild(label);
+      }
+      label.textContent = slots ? slots + ' fotos' : 'Layout';
+    });
+  }
+
+  function setupWorkspace(){
+    var nav = document.querySelector('.mobile-workspace-nav');
+    var grid = document.querySelector('.client-grid');
+    if(!nav || !grid || nav.dataset.ready === '1') return;
+
+    var tabs = Array.prototype.slice.call(nav.querySelectorAll('.workspace-tab'));
+    var preview = grid.querySelector('.album-preview-panel');
+    var photos = null;
+    Array.prototype.forEach.call(grid.children, function(child){
+      if(!photos && child !== preview && child.classList.contains('client-panel')) photos = child;
+    });
+    if(!preview || !photos) return;
+
+    nav.dataset.ready = '1';
+
+    function setActive(name){
+      tabs.forEach(function(tab){
+        var active = tab.dataset.workspace === name;
+        tab.classList.toggle('active', active);
+        tab.setAttribute('aria-selected', active ? 'true' : 'false');
+        tab.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+
+      var helper = document.getElementById('workspaceHelper');
+      if(helper){
+        if(name === 'photos'){
+          helper.innerHTML = 'Você está em <strong>Fotos</strong> · <span class="workspace-next">ao lado: Prévia →</span>';
+        }else{
+          helper.innerHTML = 'Você está em <strong>Prévia</strong> · <span class="workspace-next">ao lado: Fotos →</span>';
+        }
+      }
+    }
+
+    function go(name){
+      var target = name === 'photos' ? photos : preview;
+      if(!target) return;
+      grid.scrollTo({
+        left: Math.max(0, target.offsetLeft),
+        behavior: 'smooth'
+      });
+      setActive(name);
+    }
+
+    tabs.forEach(function(tab){
+      tab.setAttribute('aria-pressed', 'false');
+      tab.addEventListener('click', function(){
+        go(tab.dataset.workspace);
+      });
+    });
+
+    var raf = 0;
+    grid.addEventListener('scroll', function(){
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(function(){
+        var pv = Math.abs(grid.scrollLeft - preview.offsetLeft);
+        var ph = Math.abs(grid.scrollLeft - photos.offsetLeft);
+        setActive(pv <= ph ? 'preview' : 'photos');
+        updateWorkspaceCount();
+      });
+    }, {passive:true});
+
+    setActive('preview');
+    updateWorkspaceCount();
+  }
+
+  function enhanceMobileContext(){
+    var galleryHint = document.getElementById('galleryHint');
+    if(galleryHint){
+      galleryHint.innerHTML =
+        'Toque na foto para marcar como favorita. <strong>No modo Manual</strong>, toque em <strong>Página</strong> para escolher onde ela entra.';
+    }
+
+    var albumHint = document.getElementById('albumHint');
+    if(albumHint){
+      albumHint.innerHTML =
+        'Aqui você monta o álbum: toque no <strong>desenho do layout</strong> para escolher quantas fotos cabem, retire uma foto sem apagá-la da galeria e escolha um <strong>fundo</strong> para a página.';
+    }
+
+    var stickyHint = document.getElementById('stickyHint');
+    if(stickyHint){
+      stickyHint.textContent =
+        'Você pode trocar de modo e ajustar a montagem antes de gerar o TXT.';
+    }
+  }
+
+  function setupLiveObservers(){
+    // Atualização explícita em vez de observar todo o DOM.
+    // MutationObserver amplo + querySelectorAll em cada mutação gera
+    // trabalho repetido durante seleção, atribuição e abertura de modais.
+    function updateAll(){
+      updateWorkspaceCount();
+      updateLayoutButtonLabels(document);
+    }
+    window.__mobileSelectionPerfRefresh = updateAll;
+    updateAll();
+  }
+
+  function boot(){
+    moveMobileSheetsToBody();
+    enhanceMobileContext();
+    setupWorkspace();
+    setupLiveObservers();
+    wireModalBodyLock();
+
+    window.addEventListener('resize', function(){
+      setupWorkspace();
+      updateWorkspaceCount();
+    }, {passive:true});
+
+    window.addEventListener('pageshow', function(){
+      moveMobileSheetsToBody();
+      syncModalBodyLock();
+      updateWorkspaceCount();
+    });
+
+    // Sem listener global de click: cada ação atualiza apenas o que mudou.
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', boot, {once:true});
+  } else {
+    boot();
+  }
+})();
+<\/script>
+
+
+<script id="guided-flow-refactor-script">
+(function(){
+  'use strict';
+
+  var entry=document.getElementById('guidedEntry');
+  var changeModeBtn=document.getElementById('guidedChangeMode');
+  var tutorialBtn=document.getElementById('guidedEntryTutorial');
+  var finalBtn=document.getElementById('guidedFinalBtn');
+
+  var cfg={
+    manual:{
+      icon:'fa-hand-pointer',title:'Montagem Manual',subtitle:'Você decide foto por foto, página por página.',
+      note:'<strong>Próximo passo:</strong> vá para <strong>Suas fotos</strong>, encontre uma imagem e use <strong>“Página”</strong> para definir onde ela entra. Depois escolha o layout e, se quiser, o fundo.',
+      labels:['Escolha a foto','Monte as páginas','Revise o álbum','Gere a seleção']
+    },
+    sugerida:{
+      icon:'fa-wand-magic-sparkles',title:'Montagem Sugerida',subtitle:'Você escolhe suas favoritas e o sistema cria as propostas.',
+      note:'<strong>Próximo passo:</strong> em <strong>Suas fotos</strong>, apenas marque a Estrela na foto como favoritas as imagens que você mais gostou. Quando terminar, use <strong>“Montagem sugerida”</strong>.',
+      labels:['Escolha favoritas','Receba propostas','Revise e ajuste','Gere a seleção']
+    },
+    automatica:{
+      icon:'fa-robot',title:'Curadoria Automática',subtitle:'O sistema faz a curadoria usando a galeria completa.',
+      note:'<strong>Próximo passo:</strong> responda às etapas de personalização. Você informa quem é importante e o estilo desejado; o sistema cria a proposta.',
+      labels:['Defina prioridades','Oriente a curadoria','Revise o resultado','Gere a seleção']
+    }
+  };
+
+  function updatePanel(mode,stage){
+    var c=cfg[mode]||cfg.manual;
+    var icon=document.getElementById('guidedFlowIcon');
+    var title=document.getElementById('guidedFlowTitle');
+    var sub=document.getElementById('guidedFlowSubtitle');
+    var note=document.getElementById('guidedFlowNote');
+    var steps=document.querySelectorAll('#guidedFlowSteps .guided-flow-step');
+
+    if(icon) icon.innerHTML='<i class="fas '+c.icon+'"></i>';
+    if(title) title.textContent=c.title;
+    if(sub) sub.textContent=c.subtitle;
+    if(note) note.innerHTML=c.note;
+
+    steps.forEach(function(el,i){
+      el.classList.toggle('done',i<stage-1);
+      el.classList.toggle('active',i===stage-1);
+      var strong=el.querySelector('strong');
+      if(strong && c.labels[i]) strong.textContent=c.labels[i];
+    });
+    document.body.classList.toggle('guided-ready',stage>=3);
+  }
+
+  function closeEntry(){
+    if(entry) entry.hidden=true;
+    document.body.classList.remove('guided-entry-lock');
+  }
+
+  function openEntry(){
+    if(entry) entry.hidden=false;
+    document.body.classList.add('guided-entry-lock');
+  }
+
+  function goTo(id){
+    setTimeout(function(){
+      var el=document.getElementById(id);
+      if(el && el.scrollIntoView) el.scrollIntoView({behavior:'smooth',block:'start'});
+    },100);
+  }
+
+  function startMode(mode){
+    closeEntry();
+    document.body.classList.add('guided-started');
+    document.body.dataset.guidedMode=mode;
+
+    var tab=document.querySelector('[data-access-mode="'+mode+'"]');
+    if(tab) tab.click();
+
+    if(mode==='automatica'){
+      updatePanel(mode,2);
+    }else if(mode==='manual'){
+      updatePanel(mode,2);
+      goTo('thumbsGrid');
+    }else{
+      updatePanel(mode,1);
+      goTo('thumbsGrid');
+    }
+  }
+
+  document.querySelectorAll('[data-guided-start]').forEach(function(btn){
+    btn.addEventListener('click',function(){ startMode(btn.getAttribute('data-guided-start')); });
+  });
+
+  if(changeModeBtn) changeModeBtn.addEventListener('click',openEntry);
+
+  if(tutorialBtn) tutorialBtn.addEventListener('click',function(){
+    closeEntry();
+    setTimeout(function(){
+      var b=document.getElementById('btnAbrirTutorial');
+      if(b) b.click();
+    },80);
+  });
+
+  if(finalBtn) finalBtn.addEventListener('click',function(){
+    var b=document.getElementById('btnGerarTXT');
+    if(b) b.click();
+  });
+
+  var v3d=document.getElementById('btnVisualizar3D');
+  if(v3d) v3d.addEventListener('click',function(){
+    updatePanel(document.body.dataset.guidedMode||'manual',3);
+  },true);
+
+  var gen=document.getElementById('btnGerarTXT');
+  if(gen) gen.addEventListener('click',function(){
+    updatePanel(document.body.dataset.guidedMode||'manual',4);
+  },true);
+
+  document.addEventListener('click',function(e){
+    if(!document.body.classList.contains('guided-started')) return;
+    var t=e.target && e.target.closest ? e.target.closest('#layoutGrid .layout-btn,.layout-visual-btn,#pageBgApply,#modalBtnAtribuir,#modalBtnRemover') : null;
+    if(t) updatePanel(document.body.dataset.guidedMode||'manual',3);
+  },true);
+
+  window.__guidedAlbumFlow={startMode:startMode,openEntry:openEntry,closeEntry:closeEntry,updatePanel:updatePanel};
+})();
+<\/script>
+
+</body>
         </html>`;
 
                     // ----- FIM DO HTML GERADO -----
@@ -7395,6 +10462,429 @@
                     btnGerar.innerHTML = '<i class="fas fa-file-code" aria-hidden="true"></i> Gerar HTML de Seleção do cliente';
                 }
             }
+
+
+            // ── GALERIA DE FUNDOS TEMÁTICOS ──
+            function normalizarNomePasta(nome) {
+                return String(nome || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase();
+            }
+
+            function ehImagem(nome, tipo) {
+                if (tipo && tipo.startsWith('image/')) return true;
+                return /\.(jpe?g|png|webp|gif|bmp|avif|svg)$/i.test(nome || '');
+            }
+
+            function atualizarStatusFundos(texto, estado = 'pending') {
+                if (!fundosConnectionStatus) return;
+                fundosConnectionStatus.className = 'fundos-connection ' + estado;
+                const icone = estado === 'connected' ? 'fa-circle-check' : (estado === 'error' ? 'fa-triangle-exclamation' : 'fa-circle-info');
+                fundosConnectionStatus.innerHTML = `<i class="fas ${icone}" aria-hidden="true"></i> ${texto}`;
+            }
+
+            function revogarUrlsFundos() {
+                for (const url of fundosObjectUrls.values()) {
+                    try { URL.revokeObjectURL(url); } catch (_) {}
+                }
+                fundosObjectUrls.clear();
+            }
+
+            async function coletarImagensDoTema(dirHandle, tema, caminho, destino) {
+                for await (const [nome, handle] of dirHandle.entries()) {
+                    if (handle.kind === 'file') {
+                        if (!ehImagem(nome)) continue;
+                        destino.push({
+                            id: `fund_${++fundosImageSeq}`,
+                            name: nome,
+                            theme: tema,
+                            path: caminho ? `${caminho}/${nome}` : nome,
+                            handle,
+                            file: null
+                        });
+                    } else if (handle.kind === 'directory') {
+                        await coletarImagensDoTema(handle, tema, caminho ? `${caminho}/${nome}` : nome, destino);
+                    }
+                }
+            }
+
+            async function escanearFundosPorHandle(rootHandle) {
+                if (!rootHandle) return false;
+                fundosRootHandle = rootHandle;
+                revogarUrlsFundos();
+                fundosImageRegistry.clear();
+                fundosThemes = [];
+                fundosCurrentTheme = '__all__';
+                fundosSelected.clear();
+                fundosImageSeq = 0;
+
+                const entries = [];
+                for await (const [nome, handle] of rootHandle.entries()) {
+                    if (handle.kind === 'directory') {
+                        const imagens = [];
+                        await coletarImagensDoTema(handle, nome, nome, imagens);
+                        if (imagens.length) entries.push({ name: nome, images: imagens });
+                    }
+                }
+                entries.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR', { sensitivity: 'base' }));
+                for (const tema of entries) tema.images.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR', { sensitivity: 'base' }));
+                fundosThemes = entries;
+                renderFundosTematicos();
+                const total = entries.reduce((acc, item) => acc + item.images.length, 0);
+                atualizarStatusFundos(`Pasta conectada: ${rootHandle.name}`, 'connected');
+                fundosSummary.textContent = `${entries.length} tema${entries.length !== 1 ? 's' : ''} · ${total} fundo${total !== 1 ? 's' : ''}`;
+                return true;
+            }
+
+            async function verificarPermissaoFundos(handle) {
+                if (!handle) return false;
+                try {
+                    if (typeof handle.queryPermission === 'function') {
+                        const atual = await handle.queryPermission({ mode: 'read' });
+                        return atual === 'granted';
+                    }
+                    return true;
+                } catch (err) {
+                    console.warn('Permissão da biblioteca de fundos indisponível:', err);
+                    return false;
+                }
+            }
+
+            async function carregarHandleSalvoFundos() {
+                try {
+                    if (typeof localforage === 'undefined') return false;
+                    const handle = await localforage.getItem(FUNDOS_HANDLE_KEY);
+                    if (!handle || handle.kind !== 'directory') return false;
+                    if (normalizarNomePasta(handle.name) !== normalizarNomePasta(FUNDOS_ROOT_NAME)) {
+                        atualizarStatusFundos(`Pasta salva diferente de “${FUNDOS_ROOT_NAME}”.`, 'error');
+                        return false;
+                    }
+                    const permitido = await verificarPermissaoFundos(handle);
+                    if (!permitido) {
+                        atualizarStatusFundos('A pasta está salva, mas precisa de autorização novamente.', 'pending');
+                        fundosEmptyTitle.textContent = 'Autorize o acesso à biblioteca';
+                        fundosEmptyText.innerHTML = 'O navegador manteve a referência da pasta, mas a permissão de leitura precisa ser concedida novamente. Clique em <strong>Conectar pasta</strong>.';
+                        renderFundosTematicos();
+                        return false;
+                    }
+                    return await escanearFundosPorHandle(handle);
+                } catch (err) {
+                    console.warn('Não foi possível restaurar a pasta de fundos:', err);
+                    atualizarStatusFundos('Reconecte a biblioteca de fundos.', 'pending');
+                    return false;
+                }
+            }
+
+            async function conectarFundosTematicos() {
+                if (typeof window.showDirectoryPicker !== 'function') {
+                    fundosTematicosFallbackInput.click();
+                    return;
+                }
+                try {
+                    const handle = await window.showDirectoryPicker({
+                        id: 'laminaslab-fundos-tematicos',
+                        mode: 'read',
+                        startIn: 'documents'
+                    });
+                    if (normalizarNomePasta(handle.name) !== normalizarNomePasta(FUNDOS_ROOT_NAME)) {
+                        atualizarStatusFundos(`Selecione a pasta “${FUNDOS_ROOT_NAME}”.`, 'error');
+                        fundosEmptyTitle.textContent = 'Pasta incorreta';
+                        fundosEmptyText.innerHTML = `A biblioteca esperada é <strong>${FUNDOS_ROOT_NAME}</strong>. A pasta escolhida foi <strong>${handle.name}</strong>.`;
+                        renderFundosTematicos();
+                        return;
+                    }
+                    fundosRootHandle = handle;
+                    try { await localforage.setItem(FUNDOS_HANDLE_KEY, handle); } catch (err) { console.warn('A pasta não pôde ser persistida:', err); }
+                    await escanearFundosPorHandle(handle);
+                    showToast('✅ Biblioteca de fundos conectada.');
+                } catch (err) {
+                    if (err && err.name === 'AbortError') return;
+                    console.error('Erro ao conectar biblioteca de fundos:', err);
+                    atualizarStatusFundos('Não foi possível acessar a pasta.', 'error');
+                    fundosEmptyTitle.textContent = 'Não foi possível abrir a biblioteca';
+                    fundosEmptyText.textContent = err.message || 'Verifique a permissão da pasta e tente novamente.';
+                    renderFundosTematicos();
+                }
+            }
+
+            function registrarFallbackFundos(files) {
+                const arr = Array.from(files || []).filter(file => ehImagem(file.name, file.type));
+                if (!arr.length) {
+                    atualizarStatusFundos('Nenhuma imagem encontrada na seleção.', 'error');
+                    return;
+                }
+                const firstPath = arr[0].webkitRelativePath || '';
+                const rootName = firstPath.split('/')[0] || '';
+                if (rootName && normalizarNomePasta(rootName) !== normalizarNomePasta(FUNDOS_ROOT_NAME)) {
+                    atualizarStatusFundos(`Selecione “${FUNDOS_ROOT_NAME}”.`, 'error');
+                    fundosEmptyTitle.textContent = 'Pasta incorreta';
+                    fundosEmptyText.innerHTML = `A seleção manual encontrou <strong>${rootName}</strong>. Selecione a pasta <strong>${FUNDOS_ROOT_NAME}</strong>.`;
+                    renderFundosTematicos();
+                    return;
+                }
+                revogarUrlsFundos();
+                fundosImageRegistry.clear();
+                fundosThemes = [];
+                fundosSelected.clear();
+                fundosCurrentTheme = '__all__';
+                const porTema = new Map();
+                for (const file of arr) {
+                    const partes = (file.webkitRelativePath || file.name).split('/');
+                    const tema = partes[1] || 'Sem categoria';
+                    if (!porTema.has(tema)) porTema.set(tema, []);
+                    porTema.get(tema).push({ id: `fb_${++fundosImageSeq}`, name: file.name, theme: tema, path: file.webkitRelativePath || file.name, file, handle: null });
+                }
+                fundosThemes = Array.from(porTema, ([name, images]) => ({ name, images })).sort((a,b) => a.name.localeCompare(b.name,'pt-BR',{sensitivity:'base'}));
+                for (const tema of fundosThemes) tema.images.sort((a,b) => a.name.localeCompare(b.name,'pt-BR',{sensitivity:'base'}));
+                const total = fundosThemes.reduce((acc, item) => acc + item.images.length, 0);
+                atualizarStatusFundos(`Leitura manual: ${rootName || FUNDOS_ROOT_NAME}`, 'connected');
+                fundosSummary.textContent = `${fundosThemes.length} tema${fundosThemes.length !== 1 ? 's' : ''} · ${total} fundo${total !== 1 ? 's' : ''}`;
+                renderFundosTematicos();
+                showToast(`✅ ${total} fundo${total !== 1 ? 's' : ''} carregado${total !== 1 ? 's' : ''}.`);
+            }
+
+            function obterImagensFundosVisiveis() {
+                const todas = [];
+                for (const tema of fundosThemes) {
+                    if (fundosCurrentTheme !== '__all__' && tema.name !== fundosCurrentTheme) continue;
+                    for (const item of tema.images) {
+                        const termo = fundosSearchTerm.trim().toLocaleLowerCase('pt-BR');
+                        if (termo && !item.name.toLocaleLowerCase('pt-BR').includes(termo) && !item.theme.toLocaleLowerCase('pt-BR').includes(termo)) continue;
+                        todas.push(item);
+                    }
+                }
+                return todas;
+            }
+
+            function atualizarTemaClienteUI() {
+                if (fundosClientThemeStatus) {
+                    if (fundosTemaClienteSelecionado) {
+                        fundosClientThemeStatus.innerHTML = '<i class="fas fa-circle-check" aria-hidden="true"></i> Tema para o cliente: <strong>' +
+                            fundosTemaClienteSelecionado + '</strong>';
+                        fundosClientThemeStatus.classList.add('selected');
+                    } else {
+                        fundosClientThemeStatus.innerHTML = '<i class="fas fa-circle-info" aria-hidden="true"></i> Nenhum tema definido para o HTML do cliente';
+                        fundosClientThemeStatus.classList.remove('selected');
+                    }
+                }
+                if (btnFundosUsarTemaCliente) {
+                    const nome = fundosCurrentTheme !== '__all__' ? fundosCurrentTheme : '';
+                    btnFundosUsarTemaCliente.disabled = !nome || !fundosThemes.some(t => t.name === nome);
+                    btnFundosUsarTemaCliente.title = nome
+                        ? 'Enviar o tema "' + nome + '" para o HTML do cliente'
+                        : 'Selecione um tema primeiro';
+                }
+            }
+
+            function renderFundosTemas() {
+                fundosThemeBadges.innerHTML = '';
+                const total = fundosThemes.reduce((acc, t) => acc + t.images.length, 0);
+                const all = document.createElement('button');
+                all.type = 'button';
+                all.className = 'fundos-theme-badge' + (fundosCurrentTheme === '__all__' ? ' active' : '');
+                all.innerHTML = `<i class="fas fa-layer-group" aria-hidden="true"></i> Todos <span class="count">${total}</span>`;
+                all.addEventListener('click', () => {
+                    fundosCurrentTheme = '__all__';
+                    renderFundosTematicos();
+                    atualizarTemaClienteUI();
+                });
+                fundosThemeBadges.appendChild(all);
+                for (const tema of fundosThemes) {
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'fundos-theme-badge' + (fundosCurrentTheme === tema.name ? ' active' : '');
+                    btn.title = `Abrir tema ${tema.name}`;
+                    btn.innerHTML = `<i class="fas fa-folder" aria-hidden="true"></i> ${tema.name} <span class="count">${tema.images.length}</span>`;
+                    btn.addEventListener('click', () => {
+                        fundosCurrentTheme = tema.name;
+                        renderFundosTematicos();
+                        atualizarTemaClienteUI();
+                    });
+                    fundosThemeBadges.appendChild(btn);
+                }
+                atualizarTemaClienteUI();
+            }
+
+            async function materializarImagemFundos(imgEl, item) {
+                if (!imgEl || imgEl.dataset.loaded === '1') return;
+                try {
+                    let url = fundosObjectUrls.get(item.id);
+                    if (!url) {
+                        const file = item.file || (item.handle ? await item.handle.getFile() : null);
+                        if (!file) throw new Error('Arquivo indisponível');
+                        url = URL.createObjectURL(file);
+                        fundosObjectUrls.set(item.id, url);
+                    }
+                    imgEl.src = url;
+                    imgEl.dataset.loaded = '1';
+                    imgEl.onload = () => imgEl.classList.add('loaded');
+                    imgEl.onerror = () => { imgEl.alt = 'Não foi possível carregar esta imagem'; };
+                } catch (err) {
+                    console.warn('Erro ao carregar fundo:', item.path, err);
+                    imgEl.alt = 'Não foi possível carregar esta imagem';
+                }
+            }
+
+            function observarImagemFundos(img, item) {
+                fundosImageRegistry.set(item.id, item);
+                if (!fundosObserver) {
+                    fundosObserver = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                            if (!entry.isIntersecting) return;
+                            const target = entry.target;
+                            const data = fundosImageRegistry.get(target.dataset.fundosId);
+                            if (data) materializarImagemFundos(target, data);
+                            fundosObserver.unobserve(target);
+                        });
+                    }, { root: fundosContent, rootMargin: '280px 0px' });
+                }
+                fundosObserver.observe(img);
+            }
+
+            function atualizarSelecaoFundosUI() {
+                const qtd = fundosSelected.size;
+                fundosSelectionInfo.textContent = `${qtd} fundo${qtd !== 1 ? 's' : ''} selecionado${qtd !== 1 ? 's' : ''}`;
+                btnFundosAdicionar.disabled = qtd === 0;
+            }
+
+            function alternarSelecaoFundo(item, card) {
+                if (fundosSelected.has(item.id)) {
+                    fundosSelected.delete(item.id);
+                    card.classList.remove('selected');
+                    card.setAttribute('aria-pressed', 'false');
+                } else {
+                    fundosSelected.add(item.id);
+                    card.classList.add('selected');
+                    card.setAttribute('aria-pressed', 'true');
+                }
+                atualizarSelecaoFundosUI();
+            }
+
+            function renderFundosGrid() {
+                if (fundosObserver) {
+                    fundosObserver.disconnect();
+                    fundosObserver = null;
+                }
+                fundosGrid.innerHTML = '';
+                const visiveis = obterImagensFundosVisiveis();
+                if (!fundosThemes.length || !visiveis.length) {
+                    fundosGrid.hidden = true;
+                    fundosEmpty.hidden = false;
+                    fundosEmptyTitle.textContent = fundosThemes.length ? 'Nenhum fundo encontrado' : 'Conecte a biblioteca de fundos';
+                    fundosEmptyText.innerHTML = fundosThemes.length ? 'Ajuste o tema ou a busca. A estrutura da pasta continuará sendo gerenciada pelo sistema de fundos.' : 'A pasta esperada é <strong>Documentos / fundos laminaslab</strong>. Clique em <strong>Conectar pasta</strong> para criar a ligação somente de leitura.';
+                    return;
+                }
+                fundosGrid.hidden = false;
+                fundosEmpty.hidden = true;
+                const frag = document.createDocumentFragment();
+                for (const item of visiveis) {
+                    const card = document.createElement('article');
+                    card.className = 'fundos-card' + (fundosSelected.has(item.id) ? ' selected' : '');
+                    card.tabIndex = 0;
+                    card.setAttribute('role','button');
+                    card.setAttribute('aria-pressed', String(fundosSelected.has(item.id)));
+                    card.title = `${item.name} · ${item.theme}`;
+                    const thumb = document.createElement('div'); thumb.className = 'fundos-thumb';
+                    const skeleton = document.createElement('div'); skeleton.className = 'fundos-skeleton'; skeleton.innerHTML = '<i class="fas fa-image" aria-hidden="true"></i>';
+                    const img = document.createElement('img'); img.alt = item.name; img.loading = 'lazy'; img.decoding = 'async'; img.dataset.fundosId = item.id;
+                    thumb.appendChild(skeleton); thumb.appendChild(img);
+                    const check = document.createElement('div'); check.className = 'fundos-check'; check.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i>';
+                    thumb.appendChild(check);
+                    const meta = document.createElement('div'); meta.className = 'fundos-card-meta';
+                    const name = document.createElement('div'); name.className = 'fundos-card-name'; name.textContent = item.name.replace(/\.[^.]+$/,'');
+                    const theme = document.createElement('div'); theme.className = 'fundos-card-theme'; theme.textContent = item.theme;
+                    meta.appendChild(name); meta.appendChild(theme);
+                    card.appendChild(thumb); card.appendChild(meta);
+                    const toggle = () => alternarSelecaoFundo(item, card);
+                    card.addEventListener('click', toggle);
+                    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+                    frag.appendChild(card);
+                    observarImagemFundos(img, item);
+                }
+                fundosGrid.appendChild(frag);
+            }
+
+            function renderFundosTematicos() {
+                renderFundosTemas();
+                renderFundosGrid();
+                atualizarSelecaoFundosUI();
+            }
+
+            function abrirGaleriaFundos() {
+                fundosOpenedFrom = document.activeElement;
+                if (!fundosTematicosDialog.open) fundosTematicosDialog.showModal();
+                fundosTematicosSearch.focus({ preventScroll: true });
+                if (!fundosThemes.length) renderFundosTematicos();
+                carregarHandleSalvoFundos();
+            }
+
+            function fecharGaleriaFundos() {
+                if (fundosTematicosDialog.open) fundosTematicosDialog.close();
+            }
+
+            async function adicionarFundosSelecionados() {
+                const itens = Array.from(fundosSelected).map(id => fundosImageRegistry.get(id)).filter(Boolean);
+                if (!itens.length) return;
+                btnFundosAdicionar.disabled = true;
+                let adicionados = 0;
+                try {
+                    for (const item of itens) {
+                        let file = item.file;
+                        if (!file && item.handle) file = await item.handle.getFile();
+                        if (!file) continue;
+                        const n = await adicionarFotos([file]);
+                        adicionados += n;
+                    }
+                    fundosSelected.clear();
+                    renderFundosTematicos();
+                    if (adicionados) {
+                        showToast(`✅ ${adicionados} fundo${adicionados !== 1 ? 's' : ''} adicionado${adicionados !== 1 ? 's' : ''} à galeria.`);
+                        fecharGaleriaFundos();
+                    } else {
+                        showToast('ℹ️ Nenhum fundo novo foi adicionado. Verifique nomes repetidos na galeria.');
+                    }
+                } catch (err) {
+                    console.error('Erro ao adicionar fundos selecionados:', err);
+                    showToast('❌ Não foi possível adicionar os fundos selecionados.');
+                } finally {
+                    atualizarSelecaoFundosUI();
+                }
+            }
+
+            btnAbrirFundosTematicos.addEventListener('click', abrirGaleriaFundos);
+            fundosTematicosClose.addEventListener('click', fecharGaleriaFundos);
+            btnFundosConectar.addEventListener('click', conectarFundosTematicos);
+            btnFundosAtualizar.addEventListener('click', async () => {
+                if (fundosRootHandle && await verificarPermissaoFundos(fundosRootHandle)) {
+                    await escanearFundosPorHandle(fundosRootHandle);
+                    showToast('🔄 Biblioteca de fundos atualizada.');
+                } else {
+                    await conectarFundosTematicos();
+                }
+            });
+            btnFundosFallback.addEventListener('click', () => fundosTematicosFallbackInput.click());
+            btnFundosUsarTemaCliente.addEventListener('click', () => {
+                const nome = fundosCurrentTheme !== '__all__' ? fundosCurrentTheme : '';
+                if (!nome || !fundosThemes.some(t => t.name === nome)) {
+                    showToast('⚠️ Selecione um tema antes de enviá-lo ao cliente.');
+                    return;
+                }
+                fundosTemaClienteSelecionado = nome;
+                atualizarTemaClienteUI();
+                saveState();
+                showToast('✅ Tema "' + nome + '" será disponibilizado ao cliente no HTML de seleção.');
+            });
+            fundosTematicosFallbackInput.addEventListener('change', e => {
+                registrarFallbackFundos(e.target.files);
+                e.target.value = '';
+            });
+            fundosTematicosSearch.addEventListener('input', () => { fundosSearchTerm = fundosTematicosSearch.value; renderFundosTematicos(); });
+            btnFundosLimparSelecao.addEventListener('click', () => { fundosSelected.clear(); renderFundosTematicos(); });
+            btnFundosAdicionar.addEventListener('click', adicionarFundosSelecionados);
+            fundosTematicosDialog.addEventListener('close', () => {
+                atualizarSelecaoFundosUI();
+                if (fundosOpenedFrom && document.contains(fundosOpenedFrom)) setTimeout(() => fundosOpenedFrom.focus(), 0);
+                fundosOpenedFrom = null;
+            });
+            fundosTematicosDialog.addEventListener('cancel', () => { fundosOpenedFrom = document.activeElement; });
 
             // ── EVENTOS DE UPLOAD ──
             if (btnRecolherGaleriaInicial) {
